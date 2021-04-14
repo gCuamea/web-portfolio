@@ -1,12 +1,20 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Main } from './Components/Main';
 import { Navbar } from './Components/Navbar';
 
 export const PortfolioApp = () => {
+  const theme = {
+    marginSideDefault: '0 3.5vw',
+    marginSideProjects: '0 3.5vw 0 1vw',
+  };
+
   return (
-    <>
-      <Navbar />
-      <Main />
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Navbar />
+        <Main />
+      </>
+    </ThemeProvider>
   );
 };
