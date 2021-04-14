@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Main } from './Components/Main';
 import { Navbar } from './Components/Navbar';
+import { Competencies } from './Components/Competencies';
 
 export const PortfolioApp = () => {
   const theme = {
@@ -14,6 +15,7 @@ export const PortfolioApp = () => {
       <>
         <Navbar />
         <Main />
+        <Competencies />
       </>
     </ThemeProvider>
   );
