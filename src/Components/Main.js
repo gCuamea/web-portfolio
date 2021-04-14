@@ -44,7 +44,7 @@ const MainContainer = styled.main`
 
   display: grid;
   grid-template-columns: repeat(5, 1fr) 35rem;
-  grid-template-rows: min-content min-content 40rem 5rem;
+  grid-template-rows: min-content min-content min-content 35rem;
   grid-template-areas:
     'greet greet greet greet greet .'
     'title title title title title title'
@@ -150,6 +150,25 @@ const SocialButtons = styled.div`
 
   > button {
     width: 33.333%;
+    height: 7.5rem;
+
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: bolder;
+    background-color: transparent;
+    font-family: 'Inter';
+
+    border: white 1px solid;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
   }
 `;
 
