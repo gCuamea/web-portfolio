@@ -25,7 +25,7 @@ export const Competencies = () => {
         </CompetenciesContentBox>
         <CompetenciesContentBox>
           <h2 className="uppercase letter-spacing-sm">
-            Bases de datos & otros
+            Bases de datos & devops
           </h2>
           <p>MongoDB, SQL (DB2), Firestore (Firebase), Git.</p>
         </CompetenciesContentBox>
