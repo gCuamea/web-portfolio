@@ -31,13 +31,15 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-  color: var(--color-primary-semidark);
   position: relative;
   font-weight: 500;
 `;
 
 const ContactLink = styled.a`
   position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-primary-semidark);
 
   &::before {
     content: '';
