@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { Main } from './Components/Main';
 import { Navbar } from './Components/Navbar';
 import { Competencies } from './Components/Competencies';
+import { Portfolio } from './Components/Portfolio';
 
 export const PortfolioApp = () => {
   const theme = {
@@ -16,6 +17,7 @@ export const PortfolioApp = () => {
         <Navbar />
         <Main />
         <Competencies />
+        <Portfolio />
       </>
     </ThemeProvider>
   );
