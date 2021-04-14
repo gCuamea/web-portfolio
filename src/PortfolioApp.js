@@ -4,6 +4,7 @@ import { Main } from './Components/Main';
 import { Navbar } from './Components/Navbar';
 import { Competencies } from './Components/Competencies';
 import { Portfolio } from './Components/Portfolio';
+import { Footer } from './Components/Footer';
 
 export const PortfolioApp = () => {
   const theme = {
@@ -18,6 +19,7 @@ export const PortfolioApp = () => {
         <Main />
         <Competencies />
         <Portfolio />
+        <Footer />
       </>
     </ThemeProvider>
   );
