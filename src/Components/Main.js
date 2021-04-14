@@ -33,22 +33,52 @@ export const Main = () => {
 
 const MainContainer = styled.main`
   margin: ${(props) => props.theme.marginSideDefault};
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) min-content;
+  grid-template-rows: min-content min-content min-content 5rem;
+  grid-template-areas:
+    'greet greet greet greet greet .'
+    'title title title title title title'
+    'locat locat . avail avail photo'
+    'btn btn about about . photo';
 `;
 
 const Greetings = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  width: 25rem;
+  width: 100%;
+  font-size: 2.5vw;
+
+  grid-area: greet;
+
+  h3:last-child {
+    color: var(--color-primary-dark);
+  }
 `;
 
-const Title = styled.div``;
+const Title = styled.div`
+  grid-area: title;
 
-const Location = styled.div``;
+  font-size: 5vw;
+  line-height: 9vw;
+  margin-bottom: 5vw;
+
+  span {
+    display: block;
+  }
+`;
+
+const Location = styled.div`
+  grid-area: locat;
+`;
 const Availability = styled.div`
   height: 4vw;
   display: flex;
   align-items: flex-start;
+
+  grid-area: avail;
 `;
 
 const AvailabilityText = styled.h3`
@@ -85,6 +115,8 @@ const CurriculumButton = styled.button`
   font-weight: bolder;
   border: 2px solid var(--color-orange-primary);
 
+  grid-area: btn;
+
   &:hover {
     transform: translateY(0.3rem);
   }
@@ -95,4 +127,6 @@ const TempPhoto = styled.div`
   height: 50rem;
   width: 30rem;
   background-color: rgba(189, 189, 189, 1);
+
+  grid-area: photo;
 `;
