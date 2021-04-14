@@ -3,31 +3,38 @@ import styled from 'styled-components';
 
 export const Main = () => {
   return (
-    <MainContainer>
-      <Greetings>
-        <h3>
-          Hola! <br />
-          mi nombre es Alonso.
-        </h3>
-        <h3 className="uppercase">Y yo soy un</h3>
-      </Greetings>
-      <Title>
-        <h1 className="uppercase">Aspirante desarrollador frontend</h1>
-      </Title>
-      <Location>
-        <h3 className="uppercase">Basado en México</h3>
-      </Location>
-      <Availability>
-        <AvailabilityText>
-          Disponibilidad: <span>Actualmente estudiante</span>
-        </AvailabilityText>
-        <div>
-          <AvailabilityCircle></AvailabilityCircle>
-        </div>
-      </Availability>
-      <CurriculumButton>Curriculum</CurriculumButton>
-      <TempPhoto></TempPhoto>
-    </MainContainer>
+    <>
+      <MainContainer>
+        <Greetings>
+          <h3>
+            Hola! <br />
+            mi nombre es Alonso.
+          </h3>
+          <h3 className="uppercase">Y yo soy un</h3>
+        </Greetings>
+        <Title>
+          <h1 className="uppercase">Aspirante desarrollador frontend</h1>
+        </Title>
+        <Location>
+          <h3 className="uppercase">Basado en México</h3>
+        </Location>
+        <Availability>
+          <AvailabilityText>
+            Disponibilidad: <span>Actualmente estudiante</span>
+          </AvailabilityText>
+          <div>
+            <AvailabilityCircle></AvailabilityCircle>
+          </div>
+        </Availability>
+        {/* <CurriculumButton>Curriculum</CurriculumButton> */}
+        <TempPhoto></TempPhoto>
+      </MainContainer>
+      <SocialButtons>
+        <button>Curriculum</button>
+        <button>LinkedIn</button>
+        <button>GitHub</button>
+      </SocialButtons>
+    </>
   );
 };
 
@@ -36,13 +43,13 @@ const MainContainer = styled.main`
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr) min-content;
-  grid-template-rows: min-content min-content min-content 5rem;
+  grid-template-columns: repeat(5, 1fr) 35rem;
+  grid-template-rows: min-content min-content 40rem 5rem;
   grid-template-areas:
     'greet greet greet greet greet .'
     'title title title title title title'
     'locat locat avail avail avail .'
-    'btn btn about about . .';
+    'btns btns btns btns btns btns';
 `;
 
 const Greetings = styled.div`
@@ -73,6 +80,7 @@ const Title = styled.div`
 
 const Location = styled.div`
   grid-area: locat;
+  white-space: nowrap;
 
   font-size: 2vw;
 `;
@@ -119,16 +127,29 @@ const CurriculumButton = styled.button`
   background-color: transparent;
   border: none;
   padding: 0.5vw 3vw;
-  font-size: 1.5vw;
+  font-size: 2vw;
+  text-transform: uppercase;
   cursor: pointer;
   transition: transform 0.2s ease;
   font-weight: bolder;
   border: 2px solid var(--color-orange-primary);
 
+  justify-self: start;
+
   grid-area: btn;
 
   &:hover {
     transform: translateY(0.3rem);
+  }
+`;
+
+const SocialButtons = styled.div`
+  grid-area: btns;
+
+  display: flex;
+
+  > button {
+    width: 33.333%;
   }
 `;
 
@@ -139,6 +160,8 @@ const TempPhoto = styled.div`
   background-color: rgba(189, 189, 189, 1);
 
   position: absolute;
+  right: 0;
+  top: 35vw;
 
   /* grid-area: photo; */
 `;
