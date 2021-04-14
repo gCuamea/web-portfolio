@@ -30,9 +30,9 @@ export const Main = () => {
         <TempPhoto></TempPhoto>
       </MainContainer>
       <SocialButtons>
-        <button>Curriculum</button>
-        <button>LinkedIn</button>
-        <button>GitHub</button>
+        <a href="/#">LinkedIn</a>
+        <a href="/#">Curriculum</a>
+        <a href="/#">GitHub</a>
       </SocialButtons>
     </>
   );
@@ -58,6 +58,8 @@ const Greetings = styled.div`
   justify-content: space-between;
   width: 100%;
   font-size: 2.5vw;
+
+  line-height: 3vw;
 
   grid-area: greet;
 
@@ -122,7 +124,7 @@ const AvailabilityCircle = styled.p`
   background-color: var(--color-disponible);
 `;
 
-const CurriculumButton = styled.button`
+/* const CurriculumButton = styled.button`
   color: #e5e5e5;
   background-color: transparent;
   border: none;
@@ -141,33 +143,39 @@ const CurriculumButton = styled.button`
   &:hover {
     transform: translateY(0.3rem);
   }
-`;
+`; */
 
 const SocialButtons = styled.div`
   grid-area: btns;
 
   display: flex;
+  text-align: center;
 
-  > button {
+  > a {
     width: 33.333%;
     height: 7.5rem;
+    cursor: pointer;
 
-    color: white;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-orange-primary);
     font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     font-weight: bolder;
     background-color: transparent;
     font-family: 'Inter';
 
-    border: white 1px solid;
+    border: var(--color-primary-dark) 1px solid;
 
-    &:first-child {
+    &:nth-child(odd) {
       border-left: 0;
-    }
-
-    &:last-child {
       border-right: 0;
+      color: white;
     }
   }
 `;
