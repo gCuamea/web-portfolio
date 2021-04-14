@@ -40,7 +40,7 @@ const MainContainer = styled.main`
   grid-template-areas:
     'greet greet greet greet greet .'
     'title title title title title title'
-    'locat locat . avail avail photo'
+    'locat locat avail avail avail photo'
     'btn btn about about . photo';
 `;
 
@@ -72,11 +72,16 @@ const Title = styled.div`
 
 const Location = styled.div`
   grid-area: locat;
+
+  font-size: 2vw;
 `;
 const Availability = styled.div`
   height: 4vw;
+  justify-self: center;
+
   display: flex;
   align-items: flex-start;
+  position: relative;
 
   grid-area: avail;
 `;
@@ -85,9 +90,8 @@ const AvailabilityText = styled.h3`
   color: var(--color-primary);
   padding-top: 0.2vw;
   text-transform: uppercase;
-  font-size: 2.5vw;
+  font-size: 2.6vw;
 
-  position: relative;
   span {
     color: var(--color-primary-dark);
     display: block;
@@ -97,9 +101,14 @@ const AvailabilityText = styled.h3`
 
 const AvailabilityCircle = styled.p`
   content: '';
+
+  position: absolute;
+  top: 0.75vw;
+  right: -3.5vw;
+
   margin-left: 0.3rem;
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 3vw;
+  height: 3vw;
   border-radius: 50%;
   background-color: var(--color-disponible);
 `;
@@ -124,8 +133,8 @@ const CurriculumButton = styled.button`
 
 const TempPhoto = styled.div`
   content: '';
-  height: 50rem;
-  width: 30rem;
+  height: 40rem;
+  width: 35rem;
   background-color: rgba(189, 189, 189, 1);
 
   grid-area: photo;
