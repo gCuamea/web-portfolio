@@ -33,6 +33,7 @@ export const Main = () => {
 
 const MainContainer = styled.main`
   margin: ${(props) => props.theme.marginSideDefault};
+  position: relative;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr) min-content;
@@ -40,8 +41,8 @@ const MainContainer = styled.main`
   grid-template-areas:
     'greet greet greet greet greet .'
     'title title title title title title'
-    'locat locat avail avail avail photo'
-    'btn btn about about . photo';
+    'locat locat avail avail avail .'
+    'btn btn about about . .';
 `;
 
 const Greetings = styled.div`
@@ -137,5 +138,7 @@ const TempPhoto = styled.div`
   width: 35rem;
   background-color: rgba(189, 189, 189, 1);
 
-  grid-area: photo;
+  position: absolute;
+
+  /* grid-area: photo; */
 `;
