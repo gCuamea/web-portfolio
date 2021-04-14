@@ -3,14 +3,12 @@ import styled from 'styled-components';
 
 export const Navbar = () => {
   return (
-    <Header className="m-header">
-      <LeftContainer className="m-header__temp-sign">
+    <Header>
+      <LeftContainer>
         <p className="uppercase">Website temporal</p>
       </LeftContainer>
-      <RightContainer className="m-header__quick-contact">
-        <a href="www.google.com" className="uppercase link-format contact-link">
-          Mandame un email
-        </a>
+      <RightContainer>
+        <ContactLink href="www.google.com">Mandame un email</ContactLink>
       </RightContainer>
     </Header>
   );
@@ -36,9 +34,10 @@ const RightContainer = styled.div`
   color: var(--color-primary-semidark);
   position: relative;
   font-weight: 500;
+`;
 
-  .contact-link {
-    position: relative;
+const ContactLink = styled.a`
+  position: relative;
 
   &::before {
     content: '';
