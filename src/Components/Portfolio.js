@@ -12,12 +12,46 @@ export const Portfolio = () => {
           </PortfolioIntroWord>
         </PortfolioIntroTop>
       </PortfolioIntro>
+      <PortfolioProjects>
+        <Project>
+          <ProjectTitle>Twotter</ProjectTitle>
+          <ProjectInfo>
+            <ProjectPlatform>Website - App</ProjectPlatform>
+            <ProjectFrameworks>
+              ReactJS - NodeJS / Express - MongoDB - JWT
+            </ProjectFrameworks>
+          </ProjectInfo>
+        </Project>
+        <Project>
+          <ProjectTitle>Noto</ProjectTitle>
+          <ProjectInfo>
+            <ProjectPlatform>Website - App</ProjectPlatform>
+            <ProjectFrameworks>ReactJS - Firebase</ProjectFrameworks>
+          </ProjectInfo>
+        </Project>
+        <Project>
+          <ProjectTitle>Twotter</ProjectTitle>
+          <ProjectInfo>
+            <ProjectPlatform>Website - App</ProjectPlatform>
+            <ProjectFrameworks>
+              ReactJS - NodeJS / Express - MongoDB - JWT
+            </ProjectFrameworks>
+          </ProjectInfo>
+        </Project>
+        <Project>
+          <ProjectTitle>Portfolio</ProjectTitle>
+          <ProjectInfo>
+            <ProjectPlatform>Website</ProjectPlatform>
+            <ProjectFrameworks>ReactJS - GSAP</ProjectFrameworks>
+          </ProjectInfo>
+        </Project>
+      </PortfolioProjects>
     </PortfolioContainer>
   );
 };
 
 const PortfolioContainer = styled.div`
-  margin: 5rem auto 0;
+  margin: 8rem auto 0;
   display: flex;
   width: 80%;
   flex-flow: column;
@@ -29,7 +63,6 @@ const PortfolioIntro = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-bottom: 7vw;
 `;
 
 const PortfolioIntroTop = styled.h1`
@@ -64,4 +97,41 @@ const PortfolioIntroWord = styled.span`
     font-size: 1vw;
     margin-top: -2vw;
   }
+`;
+////////////////////////////////////// ?
+
+// ? Projects
+
+const PortfolioProjects = styled.div`
+  width: 100%;
+  margin: var(--margin-side-projects);
+  margin-bottom: 19vw;
+`;
+
+const Project = styled.div`
+  display: flex;
+  flex-flow: column;
+  height: 24vw;
+  justify-content: center;
+  /* padding-bottom: 5vw; */
+  border-bottom: 1px solid var(--color-primary-dark);
+`;
+
+const ProjectTitle = styled.h2`
+  margin-top: 3vw;
+  font-family: 'Fraunces', sans-serif;
+  font-size: 5vw;
+`;
+const ProjectInfo = styled.div`
+  font-size: 1.5vw;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+`;
+const ProjectPlatform = styled.p`
+  font-weight: 600;
+`;
+const ProjectFrameworks = styled.p`
+  color: var(--color-primary-dark);
+  font-weight: bolder;
 `;
