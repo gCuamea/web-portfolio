@@ -39,9 +39,7 @@ const RightContainer = styled.div`
 
   .contact-link {
     position: relative;
-  }
 
-  /* border-bottom: 1px solid var(--color-primary-semidark); */
   &::before {
     content: '';
     display: block;
