@@ -26,7 +26,6 @@ export const Main = () => {
             <AvailabilityCircle></AvailabilityCircle>
           </div>
         </Availability>
-        {/* <CurriculumButton>Curriculum</CurriculumButton> */}
         <TempPhoto></TempPhoto>
       </MainContainer>
       <SocialButtons>
@@ -124,27 +123,6 @@ const AvailabilityCircle = styled.p`
   background-color: var(--color-disponible);
 `;
 
-/* const CurriculumButton = styled.button`
-  color: #e5e5e5;
-  background-color: transparent;
-  border: none;
-  padding: 0.5vw 3vw;
-  font-size: 2vw;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  font-weight: bolder;
-  border: 2px solid var(--color-orange-primary);
-
-  justify-self: start;
-
-  grid-area: btn;
-
-  &:hover {
-    transform: translateY(0.3rem);
-  }
-`; */
-
 const SocialButtons = styled.div`
   grid-area: btns;
 
@@ -189,6 +167,4 @@ const TempPhoto = styled.div`
   position: absolute;
   right: 0;
   top: 35vw;
-
-  /* grid-area: photo; */
 `;
