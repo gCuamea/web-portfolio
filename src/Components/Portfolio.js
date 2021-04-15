@@ -128,18 +128,30 @@ const Project = styled.div`
   justify-content: center;
   /* padding-bottom: 5vw; */
   border-bottom: 1px solid var(--color-primary-dark);
+
+  @media (max-width: 920px) {
+    height: 30vw;
+  }
 `;
 
 const ProjectTitle = styled.h2`
   margin-top: 3vw;
   font-family: 'Fraunces', sans-serif;
   font-size: 5vw;
+
+  @media (max-width: 920px) {
+    font-size: 7vw;
+  }
 `;
 const ProjectInfo = styled.div`
   font-size: 1.5vw;
   line-height: 1.4;
 
   text-transform: uppercase;
+
+  @media (max-width: 920px) {
+    font-size: 2.2vw;
+  }
 `;
 const ProjectPlatform = styled.p`
   font-weight: 600;
