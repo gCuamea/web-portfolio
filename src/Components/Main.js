@@ -85,10 +85,6 @@ const Greetings = styled.div`
 
   grid-area: greet;
 
-  h3:first-child {
-    margin-right: 2rem;
-  }
-
   h3:last-child {
     color: var(--color-primary-dark);
   }
@@ -96,6 +92,10 @@ const Greetings = styled.div`
   @media (max-width: 920px) {
     font-size: 3.2vw;
     line-height: 4.3vw;
+
+    h3:first-child {
+      margin-right: 4rem;
+    }
   }
 `;
 
