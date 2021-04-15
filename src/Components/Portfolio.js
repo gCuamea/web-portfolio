@@ -118,7 +118,7 @@ const PortfolioIntroWord = styled.span`
 const PortfolioProjects = styled.div`
   width: 100%;
   margin: var(--margin-side-projects);
-  margin-bottom: 19vw;
+  margin-bottom: 7vw;
 `;
 
 const Project = styled.div`
