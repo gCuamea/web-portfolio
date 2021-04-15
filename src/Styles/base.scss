@@ -12,8 +12,6 @@
 
   --margin-side-default: 0 3.5vw;
   --margin-side-projects: 0 3.5vw 0 1vw;
-
-  --font-proyect-title: 'Fraunces', serif;
 }
 
 $bp-largest: 75em; // 1200px
@@ -31,6 +29,7 @@ $bp-smallest: 31.25em; // 500px
 *::before,
 *::after {
   box-sizing: inherit;
+  cursor: default;
 }
 
 html {
