@@ -50,6 +50,14 @@ const MainContainer = styled.main`
     'title title title title title title'
     'locat locat avail avail avail .'
     'btns btns btns btns btns btns';
+
+  @media (max-width: 990px) {
+    grid-template-areas:
+      'greet greet greet greet greet .'
+      'title title title title title title'
+      'locat locat avail avail avail .'
+      'btns btns btns btns btns btns';
+  }
 `;
 
 const Greetings = styled.div`
@@ -73,7 +81,7 @@ const Title = styled.div`
 
   font-size: 5vw;
   line-height: 9vw;
-  margin-bottom: 5vw;
+  margin: 3vw 0;
 
   span {
     display: block;
