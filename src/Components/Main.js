@@ -42,8 +42,7 @@ export const Main = () => {
           <p>
             En mi pasado también destaque como deportista profesional de
             esports, donde tuve una galardonada carrera aparte de haber tenido
-            la oportunidad de viajar a múltiples países en todo el mundo
-            <span>&#9786;.</span>
+            la oportunidad de viajar a múltiples países en todo el mundo.
           </p>
         </AboutMe>
       </MainContainer>
@@ -87,7 +86,7 @@ const MainContainer = styled.main`
       'title title title title title title'
       'locat . . . . .'
       'avail . . . . .'
-      'btns btns btns btns btns btns';
+      'about about about about about about';
   }
 `;
 
@@ -100,6 +99,14 @@ const AboutMe = styled.div`
     color: #dfdfdf;
     font-weight: 600;
     margin-bottom: 2rem;
+
+    @media (max-width: 850px) {
+      font-size: 1.8vw;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.4vw;
+    }
   }
 
   > p {
@@ -113,6 +120,15 @@ const AboutMe = styled.div`
 
     > span {
       font-size: 1.5vw;
+    }
+
+    @media (max-width: 850px) {
+      font-size: 1.8vw;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.3vw;
+      line-height: 3vw;
     }
   }
 `;
