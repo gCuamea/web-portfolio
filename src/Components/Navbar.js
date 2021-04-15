@@ -22,6 +22,10 @@ const Header = styled.header`
 
   margin: var(--margin-side-default);
   margin-bottom: 5.5vw;
+
+  @media (max-width: 920px) {
+    font-size: 3vw;
+  }
 `;
 
 const LeftContainer = styled.div`
