@@ -55,7 +55,20 @@ const MainContainer = styled.main`
     grid-template-areas:
       'greet greet greet greet greet .'
       'title title title title title title'
-      'locat locat avail avail avail .'
+      'locat locat . . . avail'
+      'btns btns btns btns btns btns';
+
+    grid-template-rows: min-content min-content min-content 50vw;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 20vw repeat(4, 1fr) 35rem;
+    grid-template-rows: min-content min-content min-content 110vw 50vw;
+    grid-template-areas:
+      'greet greet greet greet greet .'
+      'title title title title title title'
+      'locat . . . . .'
+      'avail . . . . .'
       'btns btns btns btns btns btns';
   }
 `;
@@ -68,8 +81,13 @@ const Greetings = styled.div`
   font-size: 2.5vw;
 
   line-height: 3vw;
+  white-space: nowrap;
 
   grid-area: greet;
+
+  h3:first-child {
+    margin-right: 2rem;
+  }
 
   h3:last-child {
     color: var(--color-primary-dark);
@@ -91,6 +109,7 @@ const Title = styled.div`
 const Location = styled.div`
   grid-area: locat;
   white-space: nowrap;
+  color: var(--color-primary-dark);
 
   font-size: 2vw;
 `;
@@ -103,6 +122,12 @@ const Availability = styled.div`
   position: relative;
 
   grid-area: avail;
+
+  @media (max-width: 768px) {
+    transform: rotate(-90deg);
+    align-self: center;
+    justify-self: end;
+  }
 `;
 
 const AvailabilityText = styled.h3`
@@ -115,6 +140,16 @@ const AvailabilityText = styled.h3`
     color: var(--color-primary-dark);
     display: block;
     font-size: 1.15vw;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 4.5vw;
+
+    span {
+      font-size: 2.3vw;
+      white-space: nowrap;
+      word-spacing: 0.3rem;
+    }
   }
 `;
 
@@ -130,6 +165,14 @@ const AvailabilityCircle = styled.p`
   height: 3vw;
   border-radius: 50%;
   background-color: var(--color-disponible);
+
+  @media (max-width: 768px) {
+    width: 5vw;
+    height: 5vw;
+
+    top: 1.3vw;
+    right: -6vw;
+  }
 `;
 
 const SocialButtons = styled.div`
@@ -177,4 +220,15 @@ const TempPhoto = styled.div`
   position: absolute;
   right: 0;
   top: 35vw;
+
+  @media (max-width: 990px) {
+    height: 38vw;
+    top: 50vw;
+  }
+
+  @media (max-width: 768px) {
+    height: 107vw;
+    width: 80vw;
+    top: 46vw;
+  }
 `;
