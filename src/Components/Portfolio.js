@@ -63,6 +63,10 @@ const PortfolioIntro = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+
+  @media (max-width: 920px) {
+    font-size: 6vw;
+  }
 `;
 
 const PortfolioIntroTop = styled.h1`
@@ -81,6 +85,11 @@ const PortfolioIntroYear = styled.span`
     height: 0.4vw;
     top: 48%;
     left: 75%;
+
+    @media (max-width: 920px) {
+      height: 1vw;
+      top: 47%;
+    }
   }
 `;
 
@@ -91,11 +100,15 @@ const PortfolioIntroWord = styled.span`
   > span {
     text-align: end;
     text-transform: none;
-    font-size: 1.4vw !important;
+    font-size: 1.4vw;
     color: var(--color-primary-dark);
     display: block;
-    font-size: 1vw;
     margin-top: -2vw;
+    margin-right: 0.6rem;
+
+    @media (max-width: 920px) {
+      font-size: 2.3vw;
+    }
   }
 `;
 ////////////////////////////////////// ?
