@@ -28,6 +28,7 @@ export const Main = () => {
           </div>
         </Availability>
         <TempPhoto></TempPhoto>
+        <AboutMe>About</AboutMe>
       </MainContainer>
       <SocialButtons>
         <a href="/#">LinkedIn</a>
@@ -49,14 +50,14 @@ const MainContainer = styled.main`
     'greet greet greet greet greet .'
     'title title title title title title'
     'locat locat avail avail avail .'
-    'btns btns btns btns btns btns';
+    'about about about about about .';
 
   @media (max-width: 990px) {
     grid-template-areas:
       'greet greet greet greet greet .'
       'title title title title title title'
       'locat locat . . . avail'
-      'btns btns btns btns btns btns';
+      'about about about about about .';
 
     grid-template-rows: min-content min-content min-content 50vw;
   }
@@ -71,6 +72,12 @@ const MainContainer = styled.main`
       'avail . . . . .'
       'btns btns btns btns btns btns';
   }
+`;
+
+const AboutMe = styled.div`
+  grid-area: about;
+
+  color: white;
 `;
 
 const Greetings = styled.div`
@@ -126,6 +133,7 @@ const Location = styled.div`
     font-size: 2.7vw;
   }
 `;
+
 const Availability = styled.div`
   height: 4vw;
   justify-self: center;
