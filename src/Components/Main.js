@@ -92,6 +92,11 @@ const Greetings = styled.div`
   h3:last-child {
     color: var(--color-primary-dark);
   }
+
+  @media (max-width: 920px) {
+    font-size: 3.2vw;
+    line-height: 4.3vw;
+  }
 `;
 
 const Title = styled.div`
@@ -104,6 +109,10 @@ const Title = styled.div`
   span {
     display: block;
   }
+
+  @media (max-width: 920px) {
+    margin: 1.2vw 0;
+  }
 `;
 
 const Location = styled.div`
@@ -112,6 +121,10 @@ const Location = styled.div`
   color: var(--color-primary-dark);
 
   font-size: 2vw;
+
+  @media (max-width: 920px) {
+    font-size: 2.7vw;
+  }
 `;
 const Availability = styled.div`
   height: 4vw;
