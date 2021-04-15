@@ -5,7 +5,7 @@ import video from '../assets/emojifooter3.mp4';
 export const Footer = () => {
   return (
     <FooterContainer>
-      <h2>Contactame</h2>
+      <h2>Contáctame</h2>
       <h2>gcuamea09@gmail.com</h2>
       <video src={video} muted autoPlay={true} loop></video>
     </FooterContainer>
@@ -14,10 +14,9 @@ export const Footer = () => {
 
 const FooterContainer = styled.footer`
   margin: ${(props) => props.theme.marginSideDefault};
-  /* text-transform: uppercase; */
   font-weight: 300;
   position: relative;
-  height: 40rem;
+  height: 40vw;
 
   display: flex;
   justify-content: center;
@@ -25,11 +24,15 @@ const FooterContainer = styled.footer`
 
   > video {
     position: absolute;
-    right: -8rem;
+    right: -5vw;
     bottom: 0rem;
     z-index: 2;
 
     width: 40vw;
+
+    @media (max-width: 768px) {
+      width: 45vw;
+    }
   }
 
   > h2 {
