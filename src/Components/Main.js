@@ -155,6 +155,14 @@ const AvailabilityText = styled.h3`
     font-size: 1.15vw;
   }
 
+  @media (max-width: 920px) {
+    font-size: 3.3vw;
+
+    span {
+      font-size: 1.7vw;
+    }
+  }
+
   @media (max-width: 768px) {
     font-size: 4.5vw;
 
@@ -178,6 +186,14 @@ const AvailabilityCircle = styled.p`
   height: 3vw;
   border-radius: 50%;
   background-color: var(--color-disponible);
+
+  @media (max-width: 920px) {
+    width: 4vw;
+    height: 4vw;
+
+    top: 0.7vw;
+    right: -4.6vw;
+  }
 
   @media (max-width: 768px) {
     width: 5vw;
