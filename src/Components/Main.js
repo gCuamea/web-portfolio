@@ -28,7 +28,24 @@ export const Main = () => {
           </div>
         </Availability>
         <TempPhoto></TempPhoto>
-        <AboutMe>About</AboutMe>
+        <AboutMe>
+          <h4 className="uppercase">
+            ¡Hola! Soy un estudiante foráneo para la carrera de Ing. en Sistemas
+            Computacionales para el ITESO en Guadalajara, Jal.
+          </h4>
+          <p>
+            Desde que tengo memoria siempre he sido una persona apasionada por
+            la tecnología, aparte que me considero muy visual, por lo que
+            aprender sobre el desarrollo frontend fue una decisión relativamente
+            fácil.
+          </p>
+          <p>
+            En mi pasado también destaque como deportista profesional de
+            esports, donde tuve una galardonada carrera aparte de haber tenido
+            la oportunidad de viajar a múltiples países en todo el mundo
+            <span>&#9786;.</span>
+          </p>
+        </AboutMe>
       </MainContainer>
       <SocialButtons>
         <a href="/#">LinkedIn</a>
@@ -76,8 +93,28 @@ const MainContainer = styled.main`
 
 const AboutMe = styled.div`
   grid-area: about;
+  padding: 8vw 3vw;
+  font-size: 1.5vw;
 
-  color: white;
+  > h4 {
+    color: #dfdfdf;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  > p {
+    font-weight: 500;
+    color: var(--color-primary-dark);
+    line-height: 2vw;
+
+    &:first-of-type {
+      margin-bottom: 1vw;
+    }
+
+    > span {
+      font-size: 1.5vw;
+    }
+  }
 `;
 
 const Greetings = styled.div`
@@ -186,7 +223,7 @@ const AvailabilityCircle = styled.p`
   content: '';
 
   position: absolute;
-  top: 0.75vw;
+  top: 0.65vw;
   right: -3.5vw;
 
   margin-left: 0.3rem;
