@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import profilePhoto from '../assets/profile-photo.png';
 
 export const Main = () => {
   return (
@@ -43,7 +44,7 @@ const MainContainer = styled.main`
 
   display: grid;
   grid-template-columns: repeat(5, 1fr) 35rem;
-  grid-template-rows: min-content min-content min-content 35rem;
+  grid-template-rows: min-content min-content min-content 43vw;
   grid-template-areas:
     'greet greet greet greet greet .'
     'title title title title title title'
@@ -160,9 +161,10 @@ const SocialButtons = styled.div`
 
 const TempPhoto = styled.div`
   content: '';
-  height: 40rem;
+  height: 45vw;
   width: 35rem;
-  background-color: rgba(189, 189, 189, 1);
+  background-image: url(${profilePhoto});
+  background-size: cover;
 
   position: absolute;
   right: 0;
