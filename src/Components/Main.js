@@ -104,7 +104,10 @@ export const Main = () => {
               Sistemas Computacionales para el ITESO en Guadalajara, Jal.
             </h4>
           </div>
-          <p className="animate__animated animate__fadeInLeft animate__delay-1s">
+          <p
+            className="animate__animated animate__fadeInLeft animate__delay-1s"
+            style={{ marginTop: '1vw' }}
+          >
             Desde que tengo memoria siempre he sido una persona apasionada por
             la tecnología, aparte que me considero muy visual, por lo que
             aprender sobre el desarrollo frontend fue una decisión relativamente
