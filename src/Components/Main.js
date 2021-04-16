@@ -48,16 +48,16 @@ export const Main = () => {
       <MainContainer>
         <Greetings>
           <div className="text-animate">
-            <h3 ref={TextAnimate1}>
-              Hola! <br />
-              mi nombre es Alonso.
+            <h3 ref={TextAnimate1}>Hola!</h3>
+            <h3>
+              mi nombre es <span>Alonso.</span>
             </h3>
           </div>
           <div className="text-animate">
-            <h3 className="uppercase" ref={TextAnimate2}>
+            <h4 className="uppercase" ref={TextAnimate2}>
               {' '}
               Y yo soy un
-            </h3>
+            </h4>
           </div>
         </Greetings>
         <Title>
@@ -158,7 +158,7 @@ const MainContainer = styled.main`
     grid-template-areas:
       'greet greet greet greet greet greet'
       'title title title title title title'
-      'locat locat locat locat locat .'
+      'locat locat locat locat locat locat'
       'avail . . . . .'
       'about about about about about about';
   }
@@ -219,11 +219,12 @@ const Greetings = styled.div`
 
   grid-area: greet;
 
-  h3:last-child {
-    color: var(--color-primary-dark);
-
-    @media (max-width: 768px) {
-      padding-right: 100vw;
+  > div {
+    h4 {
+      color: var(--color-primary-dark);
+      @media (max-width: 768px) {
+        padding-right: 30vw;
+      }
     }
   }
 
