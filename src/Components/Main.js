@@ -96,7 +96,7 @@ export const Main = () => {
             <AvailabilityCircle className="animate__animated animate__fadeIn animate__delay-1s"></AvailabilityCircle>
           </div>
         </Availability>
-        <TempPhoto></TempPhoto>
+        <TempPhoto className="animate__animated animate__fadeInRight animate__delay-1s"></TempPhoto>
         <AboutMe>
           <div className="text-animate">
             <h4 className="uppercase" ref={TextAnimate8}>
@@ -156,9 +156,9 @@ const MainContainer = styled.main`
     grid-template-columns: 20vw repeat(4, 1fr) 35rem;
     grid-template-rows: min-content min-content min-content 110vw 50vw;
     grid-template-areas:
-      'greet greet greet greet greet .'
+      'greet greet greet greet greet greet'
       'title title title title title title'
-      'locat . . . . .'
+      'locat locat locat locat locat .'
       'avail . . . . .'
       'about about about about about about';
   }
@@ -174,7 +174,7 @@ const AboutMe = styled.div`
     font-weight: 600;
     margin-bottom: 0.3rem;
 
-    @media (max-width: 850px) {
+    @media (max-width: 920px) {
       font-size: 1.8vw;
     }
 
@@ -196,7 +196,7 @@ const AboutMe = styled.div`
       font-size: 1.5vw;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 920px) {
       font-size: 1.8vw;
     }
 
@@ -221,14 +221,18 @@ const Greetings = styled.div`
 
   h3:last-child {
     color: var(--color-primary-dark);
+
+    @media (max-width: 768px) {
+      padding-right: 100vw;
+    }
   }
 
   @media (max-width: 920px) {
-    font-size: 3.2vw;
+    font-size: 2.8vw;
     line-height: 4.3vw;
 
     h3:first-child {
-      margin-right: 4rem;
+      margin-right: 7rem;
     }
   }
 `;
@@ -290,14 +294,14 @@ const AvailabilityText = styled.h3`
     font-size: 1.15vw;
   }
 
-  @media (max-width: 920px) {
+  /*  @media (max-width: 920px) {
     font-size: 3.3vw;
     padding-right: 10vw;
 
     span {
       font-size: 1.7vw;
-    }
-  }
+    } */
+  /* } */
 
   @media (max-width: 768px) {
     font-size: 4.5vw;
@@ -323,13 +327,13 @@ const AvailabilityCircle = styled.p`
   border-radius: 50%;
   background-color: var(--color-disponible);
 
-  @media (max-width: 920px) {
+  /* @media (max-width: 920px) {
     width: 4vw;
     height: 4vw;
 
     top: 0.7vw;
     right: 5vw;
-  }
+  } */
 
   @media (max-width: 768px) {
     width: 5vw;
