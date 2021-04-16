@@ -121,9 +121,15 @@ export const Main = () => {
         </AboutMe>
       </MainContainer>
       <SocialButtons>
-        <a href="/#">LinkedIn</a>
-        <a href="/#">Curriculum</a>
-        <a href="/#">GitHub</a>
+        <a href="/#" cursor-class="arrow">
+          LinkedIn
+        </a>
+        <a href="/#" cursor-class="arrow">
+          Curriculum
+        </a>
+        <a href="/#" cursor-class="arrow">
+          GitHub
+        </a>
       </SocialButtons>
     </>
   );
