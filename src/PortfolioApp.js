@@ -7,6 +7,8 @@ import { Portfolio } from './Components/Portfolio';
 import { Footer } from './Components/Footer';
 
 import 'animate.css';
+import { Pointer } from './Components/Pointer';
+/* import '../src/Styles/custompointer.scss'; */
 
 export const PortfolioApp = () => {
   const theme = {
@@ -17,6 +19,7 @@ export const PortfolioApp = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
+        <Pointer />
         <Navbar />
         <Main />
         <Competencies />
