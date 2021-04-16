@@ -13,37 +13,47 @@ export const Portfolio = () => {
         </PortfolioIntroTop>
       </PortfolioIntro>
       <PortfolioProjects>
+        {/* <div cursor-class="arrow" style={{ cursor: 'pointer' }}> */}
         <Project>
-          <ProjectTitle>Twotter</ProjectTitle>
-          <ProjectInfo>
-            <ProjectPlatform>Website - App</ProjectPlatform>
-            <ProjectFrameworks>
-              ReactJS - NodeJS / Express - MongoDB - JWT
-            </ProjectFrameworks>
-          </ProjectInfo>
+          <a cursor-class="arrow" href="/#">
+            <ProjectTitle>Twotter</ProjectTitle>
+            <ProjectInfo>
+              <ProjectPlatform>Website - App</ProjectPlatform>
+              <ProjectFrameworks>
+                ReactJS - NodeJS / Express - MongoDB - JWT
+              </ProjectFrameworks>
+            </ProjectInfo>
+          </a>
+        </Project>
+        {/* </div> */}
+        <Project cursor-class="arrow">
+          <a cursor-class="arrow" href="/#">
+            <ProjectTitle>Noto</ProjectTitle>
+            <ProjectInfo>
+              <ProjectPlatform>Website - App</ProjectPlatform>
+              <ProjectFrameworks>ReactJS - Firebase</ProjectFrameworks>
+            </ProjectInfo>
+          </a>
+        </Project>
+        <Project cursor-class="arrow">
+          <a cursor-class="arrow" href="/#">
+            <ProjectTitle>Twotter</ProjectTitle>
+            <ProjectInfo>
+              <ProjectPlatform>Website - App</ProjectPlatform>
+              <ProjectFrameworks>
+                ReactJS - NodeJS / Express - MongoDB - JWT
+              </ProjectFrameworks>
+            </ProjectInfo>
+          </a>
         </Project>
         <Project>
-          <ProjectTitle>Noto</ProjectTitle>
-          <ProjectInfo>
-            <ProjectPlatform>Website - App</ProjectPlatform>
-            <ProjectFrameworks>ReactJS - Firebase</ProjectFrameworks>
-          </ProjectInfo>
-        </Project>
-        <Project>
-          <ProjectTitle>Twotter</ProjectTitle>
-          <ProjectInfo>
-            <ProjectPlatform>Website - App</ProjectPlatform>
-            <ProjectFrameworks>
-              ReactJS - NodeJS / Express - MongoDB - JWT
-            </ProjectFrameworks>
-          </ProjectInfo>
-        </Project>
-        <Project>
-          <ProjectTitle>Portfolio</ProjectTitle>
-          <ProjectInfo>
-            <ProjectPlatform>Website</ProjectPlatform>
-            <ProjectFrameworks>ReactJS - GSAP</ProjectFrameworks>
-          </ProjectInfo>
+          <a cursor-class="arrow" href="/#">
+            <ProjectTitle>Portfolio</ProjectTitle>
+            <ProjectInfo>
+              <ProjectPlatform>Website</ProjectPlatform>
+              <ProjectFrameworks>ReactJS - GSAP</ProjectFrameworks>
+            </ProjectInfo>
+          </a>
         </Project>
       </PortfolioProjects>
     </PortfolioContainer>
@@ -124,10 +134,19 @@ const PortfolioProjects = styled.div`
 const Project = styled.div`
   display: flex;
   flex-flow: column;
-  height: 24vw;
+  /* height: 20vw; */
+
   justify-content: center;
-  /* padding-bottom: 5vw; */
   border-bottom: 1px solid var(--color-primary-dark);
+
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: pointer !important;
+  }
 
   @media (max-width: 920px) {
     height: 30vw;
@@ -135,7 +154,7 @@ const Project = styled.div`
 `;
 
 const ProjectTitle = styled.h2`
-  margin-top: 3vw;
+  padding-top: 5vw;
   font-family: 'Fraunces', sans-serif;
   font-size: 5vw;
 
@@ -159,4 +178,5 @@ const ProjectPlatform = styled.p`
 const ProjectFrameworks = styled.p`
   color: var(--color-primary-dark);
   font-weight: bolder;
+  padding-bottom: 3vw;
 `;
