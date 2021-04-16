@@ -1,45 +1,116 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import profilePhoto from '../assets/profile-photo.png';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
 export const Main = () => {
+  const TextAnimate1 = useRef(null);
+  const TextAnimate2 = useRef(null);
+  const TextAnimate3 = useRef(null);
+  const TextAnimate4 = useRef(null);
+  const TextAnimate5 = useRef(null);
+  const TextAnimate6 = useRef(null);
+  const TextAnimate7 = useRef(null);
+  const TextAnimate8 = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    // ? GSAP TEXT ANIMATION
+    const animateContainer = [
+      TextAnimate1.current,
+      TextAnimate2.current,
+      TextAnimate3.current,
+      TextAnimate4.current,
+      TextAnimate5.current,
+      TextAnimate6.current,
+      TextAnimate7.current,
+      TextAnimate8.current,
+    ];
+    /* gsap.from(TextAnimate1.current, {
+      duration: 1.5,
+      yPercent: 100,
+      ease: 'power4',
+      stagger: 0.1,
+    }); */
+    gsap.from(animateContainer, {
+      duration: 1.5,
+      yPercent: 100,
+      ease: 'power4',
+      stagger: 0.1,
+    });
+  }, []);
+
   return (
     <>
       <MainContainer>
         <Greetings>
-          <h3>
-            Hola! <br />
-            mi nombre es Alonso.
-          </h3>
-          <h3 className="uppercase">Y yo soy un</h3>
+          <div className="text-animate">
+            <h3 ref={TextAnimate1}>
+              Hola! <br />
+              mi nombre es Alonso.
+            </h3>
+          </div>
+          <div className="text-animate">
+            <h3 className="uppercase" ref={TextAnimate2}>
+              {' '}
+              Y yo soy un
+            </h3>
+          </div>
         </Greetings>
         <Title>
-          <h1 className="uppercase">Aspirante desarrollador frontend</h1>
+          <div className="text-animate">
+            <h1 className="uppercase" ref={TextAnimate3}>
+              Aspirante
+            </h1>
+          </div>
+          <div className="text-animate">
+            <h1 className="uppercase" ref={TextAnimate4}>
+              desarrollador
+            </h1>
+          </div>
+          <div className="text-animate">
+            <h1 className="uppercase" ref={TextAnimate5}>
+              frontend
+            </h1>
+          </div>
         </Title>
         <Location>
-          <h3 className="uppercase">Basado en México</h3>
+          <div className="text-animate">
+            <h3 className="uppercase" ref={TextAnimate6}>
+              Basado en México
+            </h3>
+          </div>
         </Location>
         <Availability>
-          <AvailabilityText>
-            Disponibilidad: <span>Actualmente estudiante</span>
-          </AvailabilityText>
+          <div className="text-animate">
+            <div ref={TextAnimate7}>
+              <AvailabilityText>
+                Disponibilidad: <span>Actualmente estudiante</span>
+              </AvailabilityText>
+            </div>
+          </div>
           <div>
-            <AvailabilityCircle></AvailabilityCircle>
+            <AvailabilityCircle className="animate__animated animate__fadeIn animate__delay-1s"></AvailabilityCircle>
           </div>
         </Availability>
         <TempPhoto></TempPhoto>
         <AboutMe>
-          <h4 className="uppercase">
-            ¡Hola! Soy un estudiante foráneo para la carrera de Ing. en Sistemas
-            Computacionales para el ITESO en Guadalajara, Jal.
-          </h4>
-          <p>
+          <div className="text-animate">
+            <h4 className="uppercase" ref={TextAnimate8}>
+              ¡Hola! Soy un estudiante foráneo para la carrera de Ing. en
+              Sistemas Computacionales para el ITESO en Guadalajara, Jal.
+            </h4>
+          </div>
+          <p className="animate__animated animate__fadeInLeft animate__delay-1s">
             Desde que tengo memoria siempre he sido una persona apasionada por
             la tecnología, aparte que me considero muy visual, por lo que
             aprender sobre el desarrollo frontend fue una decisión relativamente
             fácil.
           </p>
-          <p>
+          <p className="animate__animated animate__fadeInLeft animate__delay-1s">
             En mi pasado también destaque como deportista profesional de
             esports, donde tuve una galardonada carrera aparte de haber tenido
             la oportunidad de viajar a múltiples países en todo el mundo.
@@ -95,10 +166,10 @@ const AboutMe = styled.div`
   padding: 8vw 3vw;
   font-size: 1.5vw;
 
-  > h4 {
+  > div > h4 {
     color: #dfdfdf;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 0.3rem;
 
     @media (max-width: 850px) {
       font-size: 1.8vw;
@@ -218,6 +289,7 @@ const AvailabilityText = styled.h3`
 
   @media (max-width: 920px) {
     font-size: 3.3vw;
+    padding-right: 10vw;
 
     span {
       font-size: 1.7vw;
@@ -253,7 +325,7 @@ const AvailabilityCircle = styled.p`
     height: 4vw;
 
     top: 0.7vw;
-    right: -4.6vw;
+    right: 5vw;
   }
 
   @media (max-width: 768px) {
