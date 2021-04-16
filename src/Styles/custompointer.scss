@@ -26,8 +26,7 @@
   #cursor.arrow .cursor__circle {
     width: 128px;
     height: 128px;
-    background-color: black;
-    border-color: purple;
+    background-color: white;
   }
 
   #cursor.arrow::after {
@@ -37,7 +36,9 @@
     top: -50%;
     width: 100%;
     height: 100%;
-    background-image: url('https://svgshare.com/i/MzQ.svg');
+    background-image: url('../assets/rightarrow.svg');
+    background-size: 75%;
+    transform: rotate(-45deg);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -54,112 +55,112 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  text-decoration: none;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   outline: none;
+//   text-decoration: none;
+// }
 
-html,
-body,
-section {
-  width: 100%;
-  height: 100%;
-}
+// html,
+// body,
+// section {
+//   width: 100%;
+//   height: 100%;
+// }
 
-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f7f7f7;
-}
+// section {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #f7f7f7;
+// }
 
-section::after {
-  content: 'Only for laptop or desktop 🙇‍♂️';
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  color: #1c213e;
-  line-height: 1.7;
-}
+// section::after {
+//   content: 'Only for laptop or desktop 🙇‍♂️';
+//   position: fixed;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(255, 255, 255, 0.7);
+//   font-family: 'Poppins', sans-serif;
+//   font-size: 1rem;
+//   color: #1c213e;
+//   line-height: 1.7;
+// }
 
-.container {
-  width: 33vw;
-}
+// .container {
+//   width: 33vw;
+// }
 
-.image-container {
-  overflow: hidden;
-  cursor: pointer;
-  width: 100%;
-  height: 75%;
-  /*   margin-bottom: 0.5vw; */
-  margin-top: 10vw;
-}
+// .image-container {
+//   overflow: hidden;
+//   cursor: pointer;
+//   width: 100%;
+//   height: 75%;
+//   /*   margin-bottom: 0.5vw; */
+//   margin-top: 10vw;
+// }
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(95%);
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
+// .image-container img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   filter: brightness(95%);
+//   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+// }
 
-.text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  color: #1c213e;
-  line-height: 1.7;
-}
+// .text {
+//   font-family: 'Poppins', sans-serif;
+//   font-size: 1rem;
+//   color: #1c213e;
+//   line-height: 1.7;
+// }
 
-.underline {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
+// .underline {
+//   position: relative;
+//   display: inline-block;
+//   cursor: pointer;
+// }
 
-.underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #1c213e;
-  opacity: 0.32;
-  transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
+// .underline::after {
+//   content: '';
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 1px;
+//   background-color: #1c213e;
+//   opacity: 0.32;
+//   transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+// }
 
-.button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  color: #1c213e;
-}
+// .button {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   font-family: 'Poppins', sans-serif;
+//   color: #1c213e;
+// }
 
-.button.icon-button {
-  background-color: transparent;
-  width: 40px;
-  height: 40px;
-  margin: -8px;
-}
+// .button.icon-button {
+//   background-color: transparent;
+//   width: 40px;
+//   height: 40px;
+//   margin: -8px;
+// }
 
-.info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// .info {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 
 @media (hover: hover) and (pointer: fine) {
   .image-container:hover img {
