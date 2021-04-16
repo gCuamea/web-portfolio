@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 export const Competencies = () => {
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const animate = (entries) => {
+      const [entry] = entries;
+
+      if (entry.isIntersecting && !isVisible) {
+        setIsVisible(true);
+      }
+    };
+
+    const observer = new IntersectionObserver(animate, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1,
+    });
+
+    if (containerRef.current) observer.observe(containerRef.current);
+  }, [isVisible]);
+
   return (
-    <CompetenciesContainer>
-      <CompetenciesContent>
+    <CompetenciesContainer ref={containerRef}>
+      <CompetenciesContent
+        style={{ opacity: `${isVisible ? '1' : '0'}` }}
+        className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}
+      >
         <h2 className="uppercase letter-spacing-sm">Competencias</h2>
         <CompetenciesContentBox>
           <h2 className="uppercase letter-spacing-sm">Tecnologías Web</h2>
