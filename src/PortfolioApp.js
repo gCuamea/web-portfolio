@@ -6,6 +6,8 @@ import { Competencies } from './Components/Competencies';
 import { Portfolio } from './Components/Portfolio';
 import { Footer } from './Components/Footer';
 
+import 'animate.css';
+
 export const PortfolioApp = () => {
   const theme = {
     marginSideDefault: '0 3.5vw',
