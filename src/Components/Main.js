@@ -60,7 +60,7 @@ const MainContainer = styled.main`
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr) 35rem;
+  grid-template-columns: repeat(5, 1fr) 27vw;
   grid-template-rows: min-content min-content min-content 43vw;
   grid-template-areas:
     'greet greet greet greet greet .'
@@ -302,14 +302,14 @@ const SocialButtons = styled.div`
 
 const TempPhoto = styled.div`
   content: '';
-  height: 45vw;
-  width: 35rem;
+  height: 47vw;
+  width: 26vw;
   background-image: url(${profilePhoto});
   background-size: cover;
 
   position: absolute;
   right: 0;
-  top: 35vw;
+  top: 33vw;
 
   @media (max-width: 990px) {
     height: 38vw;
