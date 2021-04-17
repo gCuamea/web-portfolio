@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { CompetenciesContentBox } from './CompetenciesContentBox';
 
 export const Competencies = () => {
   const containerRef = useRef(null);
@@ -25,13 +26,36 @@ export const Competencies = () => {
 
   return (
     <CompetenciesContainer>
-      <CompetenciesContent
-        ref={containerRef}
-        style={{ opacity: `${isVisible ? '1' : '0'}` }}
-        className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}
-      >
-        <h2 className="uppercase letter-spacing-sm">Competencias</h2>
-        <CompetenciesContentBox>
+      <CompetenciesContent>
+        <h2
+          className="uppercase letter-spacing-sm"
+          ref={containerRef}
+          style={{ opacity: `${isVisible ? '1' : '0'}` }}
+          className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}
+        >
+          Competencias
+        </h2>
+        <CompetenciesContentBox
+          title="Tecnologías Web"
+          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
+            Node."
+        />
+        <CompetenciesContentBox
+          title="Tecnologías Web"
+          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
+            Node."
+        />
+        <CompetenciesContentBox
+          title="Tecnologías Web"
+          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
+            Node."
+        />
+        <CompetenciesContentBox
+          title="Tecnologías Web"
+          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
+            Node."
+        />
+        {/*  <CompetenciesContentBox>
           <h2 className="uppercase letter-spacing-sm">Tecnologías Web</h2>
           <p>
             HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
@@ -53,7 +77,7 @@ export const Competencies = () => {
             Bases de datos & devops
           </h2>
           <p>MongoDB, SQL (DB2), Firestore (Firebase), Git.</p>
-        </CompetenciesContentBox>
+        </CompetenciesContentBox> */}
       </CompetenciesContent>
     </CompetenciesContainer>
   );
@@ -83,7 +107,7 @@ const CompetenciesContent = styled.div`
   }
 `;
 
-const CompetenciesContentBox = styled.div`
+/* const CompetenciesContentBox = styled.div`
   padding: 1rem 0;
 
   > h2 {
@@ -93,4 +117,4 @@ const CompetenciesContentBox = styled.div`
   > p {
     font-size: 1.8rem;
   }
-`;
+`; */
