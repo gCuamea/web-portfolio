@@ -39,10 +39,30 @@ const CompetenciesContentContainer = styled.div`
   padding: 1.3rem 0;
 
   > h2 {
-    font-size: 2.5rem;
+    font-size: 2vw;
   }
 
   > p {
-    font-size: 1.8rem;
+    font-size: 1.4vw;
+  }
+
+  @media (max-width: 920px) {
+    > h2 {
+      font-size: 3vw;
+    }
+
+    > p {
+      font-size: 2vw;
+    }
+  }
+
+  @media (max-width: 600px) {
+    > h2 {
+      font-size: 5vw;
+    }
+
+    > p {
+      font-size: 3vw;
+    }
   }
 `;
