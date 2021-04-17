@@ -24,8 +24,9 @@ export const Competencies = () => {
   }, [isVisible]);
 
   return (
-    <CompetenciesContainer ref={containerRef}>
+    <CompetenciesContainer>
       <CompetenciesContent
+        ref={containerRef}
         style={{ opacity: `${isVisible ? '1' : '0'}` }}
         className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}
       >
@@ -64,16 +65,16 @@ const CompetenciesContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin: 7rem 0;
 `;
 
 const CompetenciesContent = styled.div`
   width: 100%;
   margin: 0 20vw;
-  height: 40rem;
+  height: 47rem;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-around;
   > h2 {
     margin: 2rem 0;
     font-size: 7rem;
