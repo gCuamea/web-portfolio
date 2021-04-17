@@ -28,10 +28,11 @@ export const Competencies = () => {
     <CompetenciesContainer>
       <CompetenciesContent>
         <h2
-          className="uppercase letter-spacing-sm"
           ref={containerRef}
           style={{ opacity: `${isVisible ? '1' : '0'}` }}
-          className={`animate__animated ${isVisible ? 'animate__fadeIn' : ''}`}
+          className={`uppercase letter-spacing-sm animate__animated ${
+            isVisible ? 'animate__fadeIn' : ''
+          }`}
         >
           Competencias
         </h2>
