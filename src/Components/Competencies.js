@@ -36,9 +36,8 @@ export const Competencies = () => {
           Competencias
         </h2>
         <CompetenciesContentBox
-          title="Tecnologías Web"
-          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
-            Node."
+          title="Frameworks / librerías web"
+          text="ReactJS, NodeJS, Express, JSON Web Tokens."
         />
         <CompetenciesContentBox
           title="Tecnologías Web"
@@ -46,38 +45,13 @@ export const Competencies = () => {
             Node."
         />
         <CompetenciesContentBox
-          title="Tecnologías Web"
-          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
-            Node."
+          title="Frameworks de React"
+          text="Redux, React Router, Jest, Enzyme."
         />
         <CompetenciesContentBox
-          title="Tecnologías Web"
-          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
-            Node."
+          title="Bases de datos & devops"
+          text="MongoDB, SQL (DB2), Firestore (Firebase), Git."
         />
-        {/*  <CompetenciesContentBox>
-          <h2 className="uppercase letter-spacing-sm">Tecnologías Web</h2>
-          <p>
-            HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
-            Node.
-          </p>
-        </CompetenciesContentBox>
-        <CompetenciesContentBox>
-          <h2 className="uppercase letter-spacing-sm">
-            Frameworks / librerías web
-          </h2>
-          <p>ReactJS, NodeJS, Express, JSON Web Tokens.</p>
-        </CompetenciesContentBox>
-        <CompetenciesContentBox>
-          <h2 className="uppercase letter-spacing-sm">Frameworks de React</h2>
-          <p>Redux, React Router, Jest, Enzyme.</p>
-        </CompetenciesContentBox>
-        <CompetenciesContentBox>
-          <h2 className="uppercase letter-spacing-sm">
-            Bases de datos & devops
-          </h2>
-          <p>MongoDB, SQL (DB2), Firestore (Firebase), Git.</p>
-        </CompetenciesContentBox> */}
       </CompetenciesContent>
     </CompetenciesContainer>
   );
