@@ -16,7 +16,7 @@ export const CompetenciesContentBox = ({ title, text }) => {
 
     const observer = new IntersectionObserver(animate, {
       root: null,
-      rootMargin: '-110px',
+      rootMargin: '-40px',
       threshold: 1,
     });
 

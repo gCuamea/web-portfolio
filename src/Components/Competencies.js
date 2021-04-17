@@ -65,11 +65,13 @@ const CompetenciesContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin: 7rem 0;
+  width: 100%;
 `;
 
 const CompetenciesContent = styled.div`
-  width: 100%;
-  margin: 0 20vw;
+  width: 80%;
+  margin: 0 5vw;
+  text-align: left;
 
   /* height: 47rem; */
   display: flex;
@@ -77,7 +79,7 @@ const CompetenciesContent = styled.div`
   justify-content: space-around;
   > h2 {
     margin: 2rem 0;
-    font-size: 7rem;
+    font-size: 7vw;
     text-align: center;
   }
 `;
