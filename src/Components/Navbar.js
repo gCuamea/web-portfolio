@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const Navbar = () => {
+  const handleSendMail = () => {
+    window.open('mailto:gcuamea09@gmail.com?subject=Asunto&body=');
+  };
+
   return (
     <Header>
       <LeftContainer>
         <p className="uppercase">Website temporal</p>
       </LeftContainer>
-      <RightContainer>
+      <RightContainer onClick={handleSendMail}>
         <ContactLink href="www.google.com">Mandame un email</ContactLink>
       </RightContainer>
     </Header>
@@ -39,7 +43,7 @@ const RightContainer = styled.div`
   font-weight: 500;
 `;
 
-const ContactLink = styled.a`
+const ContactLink = styled.div`
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
