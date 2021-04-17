@@ -14,6 +14,7 @@ export const Main = () => {
   const TextAnimate6 = useRef(null);
   const TextAnimate7 = useRef(null);
   const TextAnimate8 = useRef(null);
+  const TextAnimate9 = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +29,7 @@ export const Main = () => {
       TextAnimate6.current,
       TextAnimate7.current,
       TextAnimate8.current,
+      TextAnimate9.current,
     ];
     /* gsap.from(TextAnimate1.current, {
       duration: 1.5,
@@ -47,14 +49,18 @@ export const Main = () => {
     <>
       <MainContainer>
         <Greetings>
-          <div className="text-animate">
-            <h3 ref={TextAnimate1}>Hola!</h3>
-            <h3>
-              mi nombre es <span>Alonso.</span>
-            </h3>
+          <div className="left">
+            <div className="text-animate">
+              <h3 ref={TextAnimate1}>Hola!</h3>
+            </div>
+            <div className="text-animate">
+              <h3 ref={TextAnimate2}>
+                mi nombre es <span>Alonso.</span>
+              </h3>
+            </div>
           </div>
           <div className="text-animate">
-            <h4 className="uppercase" ref={TextAnimate2}>
+            <h4 className="uppercase" ref={TextAnimate3}>
               {' '}
               Y yo soy un
             </h4>
@@ -62,31 +68,31 @@ export const Main = () => {
         </Greetings>
         <Title>
           <div className="text-animate">
-            <h1 className="uppercase" ref={TextAnimate3}>
+            <h1 className="uppercase" ref={TextAnimate4}>
               Aspirante
             </h1>
           </div>
           <div className="text-animate">
-            <h1 className="uppercase" ref={TextAnimate4}>
+            <h1 className="uppercase" ref={TextAnimate5}>
               desarrollador
             </h1>
           </div>
           <div className="text-animate">
-            <h1 className="uppercase" ref={TextAnimate5}>
+            <h1 className="uppercase" ref={TextAnimate6}>
               frontend
             </h1>
           </div>
         </Title>
         <Location>
           <div className="text-animate">
-            <h3 className="uppercase" ref={TextAnimate6}>
+            <h3 className="uppercase" ref={TextAnimate7}>
               Basado en México
             </h3>
           </div>
         </Location>
         <Availability>
           <div className="text-animate">
-            <div ref={TextAnimate7}>
+            <div ref={TextAnimate8}>
               <AvailabilityText>
                 Disponibilidad: <span>Actualmente estudiante</span>
               </AvailabilityText>
@@ -99,7 +105,7 @@ export const Main = () => {
         <TempPhoto className="animate__animated animate__fadeInRight animate__delay-1s"></TempPhoto>
         <AboutMe>
           <div className="text-animate">
-            <h4 className="uppercase" ref={TextAnimate8}>
+            <h4 className="uppercase" ref={TextAnimate9}>
               ¡Hola! Soy un estudiante foráneo para la carrera de Ing. en
               Sistemas Computacionales para el ITESO en Guadalajara, Jal.
             </h4>
