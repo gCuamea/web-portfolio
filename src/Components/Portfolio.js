@@ -61,7 +61,7 @@ export const Portfolio = () => {
 };
 
 const PortfolioContainer = styled.div`
-  margin: 8rem auto 0;
+  margin: 0 auto;
   display: flex;
   width: 80%;
   flex-flow: column;
