@@ -77,6 +77,10 @@ const PortfolioIntro = styled.div`
   @media (max-width: 920px) {
     font-size: 6vw;
   }
+
+  @media (max-width: 600px) {
+    font-size: 8vw;
+  }
 `;
 
 const PortfolioIntroTop = styled.h1`
@@ -119,6 +123,10 @@ const PortfolioIntroWord = styled.span`
     @media (max-width: 920px) {
       font-size: 2.3vw;
     }
+
+    @media (max-width: 600px) {
+      font-size: 4vw;
+    }
   }
 `;
 ////////////////////////////////////// ?
@@ -151,6 +159,10 @@ const Project = styled.div`
   @media (max-width: 920px) {
     height: 30vw;
   }
+
+  @media (max-width: 600px) {
+    height: 40vw;
+  }
 `;
 
 const ProjectTitle = styled.h2`
@@ -161,6 +173,10 @@ const ProjectTitle = styled.h2`
   @media (max-width: 920px) {
     font-size: 7vw;
   }
+
+  @media (max-width: 600px) {
+    font-size: 9vw;
+  }
 `;
 const ProjectInfo = styled.div`
   font-size: 1.5vw;
@@ -170,6 +186,10 @@ const ProjectInfo = styled.div`
 
   @media (max-width: 920px) {
     font-size: 2.2vw;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 3vw;
   }
 `;
 const ProjectPlatform = styled.p`
