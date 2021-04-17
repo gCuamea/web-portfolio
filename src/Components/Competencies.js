@@ -71,7 +71,8 @@ const CompetenciesContainer = styled.section`
 const CompetenciesContent = styled.div`
   width: 100%;
   margin: 0 20vw;
-  height: 47rem;
+
+  /* height: 47rem; */
   display: flex;
   flex-flow: column;
   justify-content: space-around;
@@ -83,11 +84,13 @@ const CompetenciesContent = styled.div`
 `;
 
 const CompetenciesContentBox = styled.div`
+  padding: 1rem 0;
+
   > h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   > p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 `;
