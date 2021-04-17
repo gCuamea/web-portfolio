@@ -166,7 +166,7 @@ const MainContainer = styled.main`
 
   @media (max-width: 768px) {
     grid-template-columns: 20vw repeat(4, 1fr) 35rem;
-    grid-template-rows: min-content min-content min-content 110vw 50vw;
+    grid-template-rows: min-content min-content min-content 110vw min-content;
     grid-template-areas:
       'greet greet greet greet greet greet'
       'title title title title title title'
@@ -193,6 +193,10 @@ const AboutMe = styled.div`
     @media (max-width: 768px) {
       font-size: 2.4vw;
     }
+
+    @media (max-width: 600px) {
+      font-size: 3.2vw;
+    }
   }
 
   > p {
@@ -215,6 +219,11 @@ const AboutMe = styled.div`
     @media (max-width: 768px) {
       font-size: 2.3vw;
       line-height: 3vw;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 3.15vw;
+      line-height: 3.6vw;
     }
   }
 `;
