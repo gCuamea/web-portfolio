@@ -36,7 +36,7 @@ export const CompetenciesContentBox = ({ title, text }) => {
 };
 
 const CompetenciesContentContainer = styled.div`
-  padding: 1rem 0;
+  padding: 1.3rem 0;
 
   > h2 {
     font-size: 2.5rem;
