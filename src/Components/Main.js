@@ -365,7 +365,7 @@ const SocialButtons = styled.div`
 
   > a {
     width: 33.333%;
-    height: 7.5rem;
+    height: 9rem;
     cursor: pointer;
 
     text-decoration: none;
