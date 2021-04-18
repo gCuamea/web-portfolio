@@ -3,10 +3,14 @@ import styled from 'styled-components';
 import video from '../assets/emojifooter3.mp4';
 
 export const Footer = () => {
+  const handleSendMail = () => {
+    window.open('mailto:gcuamea09@gmail.com?subject=Asunto&body=');
+  };
+
   return (
     <FooterContainer>
       <h2>Contáctame</h2>
-      <h2>gcuamea09@gmail.com</h2>
+      <h2 onClick={handleSendMail}>gcuamea09@gmail.com</h2>
       <video src={video} muted autoPlay={true} loop></video>
     </FooterContainer>
   );
@@ -54,6 +58,7 @@ const FooterContainer = styled.footer`
       transition: all 0.2s ease;
       z-index: 10;
       position: relative;
+      cursor: pointer;
 
       &:hover {
         color: white;
