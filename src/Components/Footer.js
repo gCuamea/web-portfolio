@@ -10,7 +10,9 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <h2>Contáctame</h2>
-      <h2 onClick={handleSendMail}>gcuamea09@gmail.com</h2>
+      <h2 onClick={handleSendMail} cursor-class="arrow">
+        gcuamea09@gmail.com
+      </h2>
       <video src={video} muted autoPlay={true} loop></video>
     </FooterContainer>
   );
