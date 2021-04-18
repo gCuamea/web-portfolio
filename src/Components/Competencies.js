@@ -81,6 +81,10 @@ const CompetenciesContent = styled.div`
     margin: 2rem 0;
     font-size: 7vw;
     text-align: center;
+
+    @media (max-width: 600px) {
+      font-size: 9vw;
+    }
   }
 `;
 
