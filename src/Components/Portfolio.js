@@ -69,7 +69,7 @@ const PortfolioContainer = styled.div`
 
 // ? Intro (top title)
 const PortfolioIntro = styled.div`
-  font-size: 3.3vw;
+  font-size: 4vw;
   display: flex;
   width: 100%;
   justify-content: center;
