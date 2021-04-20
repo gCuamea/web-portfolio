@@ -178,6 +178,7 @@ const MainContainer = styled.main`
 
 const AboutMe = styled.div`
   grid-area: about;
+  align-self: center;
   padding: 8vw 3vw;
   font-size: 1.5vw;
 
@@ -407,6 +408,7 @@ const TempPhoto = styled.div`
   width: 26vw;
   background-image: url(${profilePhoto});
   background-size: cover;
+  background-position: center;
 
   position: absolute;
   right: 0;
