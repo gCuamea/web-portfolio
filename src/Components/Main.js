@@ -2,6 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import profilePhoto from '../assets/profile-photo.png';
 
+import reactSVG from '../assets/react.svg';
+import jsSVG from '../assets/js.svg';
+import sassSVG from '../assets/sass.svg';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
@@ -31,12 +35,6 @@ export const Main = () => {
       TextAnimate8.current,
       TextAnimate9.current,
     ];
-    /* gsap.from(TextAnimate1.current, {
-      duration: 1.5,
-      yPercent: 100,
-      ease: 'power4',
-      stagger: 0.1,
-    }); */
     gsap.from(animateContainer, {
       duration: 1.5,
       yPercent: 100,
@@ -102,7 +100,13 @@ export const Main = () => {
             <AvailabilityCircle className="animate__animated animate__fadeIn animate__delay-1s"></AvailabilityCircle>
           </div>
         </Availability>
-        <TempPhoto className="animate__animated animate__fadeInRight animate__delay-1s"></TempPhoto>
+        <PhotoContainer className="animate__animated animate__fadeInRight animate__delay-1s">
+          <FrameworksContainer>
+            <FrameworkIcon src={jsSVG}></FrameworkIcon>
+            <FrameworkIcon src={reactSVG}></FrameworkIcon>
+            <FrameworkIcon src={sassSVG}></FrameworkIcon>
+          </FrameworksContainer>
+        </PhotoContainer>
         <AboutMe>
           <div className="text-animate">
             <h4 className="uppercase" ref={TextAnimate9}>
@@ -402,17 +406,21 @@ const SocialButtons = styled.div`
   }
 `;
 
-const TempPhoto = styled.div`
-  content: '';
+const PhotoContainer = styled.div`
   height: 47vw;
   width: 26vw;
+  padding: 0rem 3rem;
   background-image: url(${profilePhoto});
   background-size: cover;
   background-position: center;
+  border-radius: 4px;
 
   position: absolute;
   right: 0;
   top: 33vw;
+
+  display: flex;
+  align-items: flex-end;
 
   @media (max-width: 990px) {
     height: 38vw;
@@ -423,5 +431,26 @@ const TempPhoto = styled.div`
     height: 107vw;
     width: 80vw;
     top: 46vw;
+
+    padding: 0 6vw;
+  }
+`;
+
+const FrameworksContainer = styled.div`
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const FrameworkIcon = styled.img`
+  width: 5vw;
+  height: 5vw;
+
+  @media (max-width: 768px) {
+    width: 13vw;
+    height: 13vw;
   }
 `;
