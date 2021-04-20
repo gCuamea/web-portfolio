@@ -6,6 +6,8 @@ import reactSVG from '../assets/react.svg';
 import jsSVG from '../assets/js.svg';
 import sassSVG from '../assets/sass.svg';
 
+import curriculumPDF from '../assets/curriculum.pdf';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
@@ -131,13 +133,28 @@ export const Main = () => {
         </AboutMe>
       </MainContainer>
       <SocialButtons>
-        <a href="/#" cursor-class="arrow">
+        <a
+          href="https://www.linkedin.com/in/alonsocuamea/"
+          target="_blank"
+          rel="noreferrer"
+          cursor-class="arrow"
+        >
           LinkedIn
         </a>
-        <a href="/#" cursor-class="arrow">
+        <a
+          href={curriculumPDF}
+          cursor-class="arrow"
+          target="_blank"
+          rel="noreferrer"
+        >
           Curriculum
         </a>
-        <a href="/#" cursor-class="arrow">
+        <a
+          href="https://github.com/gCuamea"
+          cursor-class="arrow"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub
         </a>
       </SocialButtons>
@@ -354,14 +371,6 @@ const AvailabilityCircle = styled.p`
   border-radius: 50%;
   background-color: var(--color-disponible);
 
-  /* @media (max-width: 920px) {
-    width: 4vw;
-    height: 4vw;
-
-    top: 0.7vw;
-    right: 5vw;
-  } */
-
   @media (max-width: 768px) {
     width: 5vw;
     height: 5vw;
@@ -407,7 +416,7 @@ const SocialButtons = styled.div`
 `;
 
 const PhotoContainer = styled.div`
-  height: 47vw;
+  height: 53vw;
   width: 26vw;
   padding: 0rem 3rem;
   background-image: url(${profilePhoto});
@@ -417,7 +426,7 @@ const PhotoContainer = styled.div`
 
   position: absolute;
   right: 0;
-  top: 33vw;
+  top: 30vw;
 
   display: flex;
   align-items: flex-end;
