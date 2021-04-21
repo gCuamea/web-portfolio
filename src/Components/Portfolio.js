@@ -311,6 +311,7 @@ const ProjectVideo = styled.div`
     &::after {
       left: -1vw;
       width: 75vw;
+      display: none;
     }
 
     /* transform: translateX(-50%); */
@@ -318,7 +319,6 @@ const ProjectVideo = styled.div`
 
   @media (max-width: 600px) {
     &::after {
-      display: none;
     }
   }
 `;
