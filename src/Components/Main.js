@@ -94,7 +94,7 @@ export const Main = () => {
           <div className="text-animate">
             <div ref={TextAnimate8}>
               <AvailabilityText>
-                Disponibilidad: <span>Actualmente estudiante</span>
+                Disponibilidad: <span>Actualmente estudiando</span>
               </AvailabilityText>
             </div>
           </div>
