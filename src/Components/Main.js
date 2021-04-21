@@ -341,6 +341,12 @@ const AvailabilityText = styled.h3`
     font-size: 1.15vw;
   }
 
+  @media (max-width: 920px) {
+    span {
+      font-size: 1.35vw;
+    }
+  }
+
   @media (max-width: 768px) {
     font-size: 4.5vw;
 
