@@ -1,5 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import twotterVid from '../assets/twottervid.mkv';
+import notoVid from '../assets/notovid.mkv';
+import portfolioVid from '../assets/portfoliovid.mkv';
 
 export const Portfolio = () => {
   return (
@@ -13,7 +17,6 @@ export const Portfolio = () => {
         </PortfolioIntroTop>
       </PortfolioIntro>
       <PortfolioProjects>
-        {/* <div cursor-class="arrow" style={{ cursor: 'pointer' }}> */}
         <Project>
           <a cursor-class="arrow" href="/#">
             <ProjectTitle>Twotter</ProjectTitle>
@@ -23,28 +26,34 @@ export const Portfolio = () => {
                 ReactJS - NodeJS / Express - MongoDB - JWT
               </ProjectFrameworks>
             </ProjectInfo>
-            <ProjectVideo></ProjectVideo>
+            <ProjectVideo className="pvideo">
+              <video src={twotterVid} muted autoPlay={true} loop></video>
+            </ProjectVideo>
           </a>
         </Project>
-        {/* </div> */}
+
         <Project cursor-class="arrow">
           <a cursor-class="arrow" href="/#">
             <ProjectTitle>Noto</ProjectTitle>
             <ProjectInfo>
               <ProjectPlatform>Website - App</ProjectPlatform>
-              <ProjectFrameworks>ReactJS - Firebase</ProjectFrameworks>
+              <ProjectFrameworks>ReactJS - Firebase - JWT</ProjectFrameworks>
             </ProjectInfo>
+            <ProjectVideo className="pvideo">
+              <video src={notoVid} muted autoPlay={true} loop></video>
+            </ProjectVideo>
           </a>
         </Project>
         <Project cursor-class="arrow">
           <a cursor-class="arrow" href="/#">
-            <ProjectTitle>Twotter</ProjectTitle>
+            <ProjectTitle className="ptitle">Twotter</ProjectTitle>
             <ProjectInfo>
               <ProjectPlatform>Website - App</ProjectPlatform>
               <ProjectFrameworks>
                 ReactJS - NodeJS / Express - MongoDB - JWT
               </ProjectFrameworks>
             </ProjectInfo>
+            <ProjectVideo className="pvideo"></ProjectVideo>
           </a>
         </Project>
         <Project>
@@ -54,6 +63,9 @@ export const Portfolio = () => {
               <ProjectPlatform>Website</ProjectPlatform>
               <ProjectFrameworks>ReactJS - GSAP</ProjectFrameworks>
             </ProjectInfo>
+            <ProjectVideo className="pvideo">
+              <video src={portfolioVid} muted autoPlay={true} loop></video>
+            </ProjectVideo>
           </a>
         </Project>
       </PortfolioProjects>
@@ -134,6 +146,16 @@ const PortfolioIntroWord = styled.span`
 
 // ? Projects
 
+const videoZoom = keyframes`
+  0% {
+    transform: scale(1.2);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+`;
+
 const PortfolioProjects = styled.div`
   width: 100%;
   margin: var(--margin-side-projects);
@@ -158,6 +180,17 @@ const Project = styled.div`
     cursor: pointer !important;
   }
 
+  &:hover {
+    .pvideo {
+      &::after {
+        transform: translate(-40vw, 40vw);
+      }
+      > video {
+        animation: ${videoZoom} 1.3s ease-out;
+      }
+    }
+  }
+
   @media (max-width: 920px) {
     height: 30vw;
   }
@@ -168,7 +201,7 @@ const Project = styled.div`
 `;
 
 const ProjectTitle = styled.h2`
-  padding-top: 5vw;
+  padding-top: 7vw;
   font-family: 'Fraunces', sans-serif;
   font-size: 5vw;
 
@@ -208,14 +241,24 @@ const ProjectVideo = styled.div`
   right: 3%;
   top: 50%;
 
-  height: 20rem;
-  width: 30rem;
+  height: 90%;
+  width: 40rem;
 
   transform: translateY(-50%);
 
-  background-color: orangered;
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* 1 */
   z-index: 4;
   overflow: hidden;
+
+  > video {
+    border-radius: 3px;
+    width: 100%; /* 100 * 16 / 9 */
+  }
 
   &:hover {
     &::after {
