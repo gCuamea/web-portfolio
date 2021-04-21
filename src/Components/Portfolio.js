@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 import twotterVid from '../assets/twottervid.mkv';
 import notoVid from '../assets/notovid.mkv';
+import doggoVid from '../assets/doggovid.mkv';
 import portfolioVid from '../assets/portfoliovid.mkv';
 
 export const Portfolio = () => {
@@ -46,14 +47,14 @@ export const Portfolio = () => {
         </Project>
         <Project cursor-class="arrow">
           <a cursor-class="arrow" href="/#">
-            <ProjectTitle className="ptitle">Twotter</ProjectTitle>
+            <ProjectTitle className="ptitle">Doggocare</ProjectTitle>
             <ProjectInfo>
-              <ProjectPlatform>Website - App</ProjectPlatform>
-              <ProjectFrameworks>
-                ReactJS - NodeJS / Express - MongoDB - JWT
-              </ProjectFrameworks>
+              <ProjectPlatform>Website</ProjectPlatform>
+              <ProjectFrameworks>Bootstrap 5</ProjectFrameworks>
             </ProjectInfo>
-            <ProjectVideo className="pvideo"></ProjectVideo>
+            <ProjectVideo className="pvideo">
+              <video src={doggoVid} muted autoPlay={true} loop></video>
+            </ProjectVideo>
           </a>
         </Project>
         <Project>
@@ -242,7 +243,7 @@ const ProjectVideo = styled.div`
   top: 50%;
 
   height: 90%;
-  width: 40rem;
+  width: 30vw;
 
   transform: translateY(-50%);
 
