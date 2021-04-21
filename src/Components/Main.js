@@ -420,12 +420,10 @@ const profileAnimationReveal = keyframes`
 
 const profileAnimationZoom = keyframes`
   0% {
-    /* tra: 2000% */
     transform: scale(1.3);
   }
   
   100% {
-    /* background-size: cover; */
     transform: scale(1);
   }
 `;
@@ -434,29 +432,10 @@ const PhotoDiv = styled.div`
   overflow: hidden;
   height: 53vw;
   width: 26vw;
-`;
-
-const PhotoContainer = styled.div`
-  height: 100%;
-  width: 100%;
-  padding: 0rem 3rem;
-  background-image: url(${profilePhoto});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* border-radius: 4px; */
-
-  animation: ${profileAnimationZoom} 3s ease;
 
   position: absolute;
   right: 0;
   top: 30vw;
-
-  display: flex;
-  align-items: flex-end;
-
-  overflow: hidden;
-
   @media (max-width: 990px) {
     height: 38vw;
     top: 50vw;
@@ -469,6 +448,24 @@ const PhotoContainer = styled.div`
 
     padding: 0 6vw;
   }
+`;
+
+const PhotoContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-image: url(${profilePhoto});
+  background-size: cover;
+  background-position: center;
+
+  padding: 0rem 3rem;
+  border-radius: 4px;
+
+  animation: ${profileAnimationZoom} 3s ease;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
 
   &::after {
     content: '';
