@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
-import profilePhoto from '../assets/profile-photo.png';
+
+import profilePhotoSmall from '../assets/profile-photo-sm.jpg';
+import profilePhotoMedium from '../assets/profile-photo-md.jpg';
+import profilePhotoLarge from '../assets/profile-photo-xl.jpg';
 
 import reactSVG from '../assets/react.svg';
 import jsSVG from '../assets/js.svg';
@@ -103,8 +106,7 @@ export const Main = () => {
           </div>
         </Availability>
         <PhotoDiv>
-          <PhotoContainer /* className="animate__animated animate__fadeInRight animate__delay-1s" */
-          >
+          <PhotoContainer>
             <FrameworksContainer>
               <FrameworkIcon src={jsSVG}></FrameworkIcon>
               <FrameworkIcon src={reactSVG}></FrameworkIcon>
@@ -459,7 +461,7 @@ const PhotoDiv = styled.div`
 const PhotoContainer = styled.div`
   height: 100%;
   width: 100%;
-  background-image: url(${profilePhoto});
+  background-image: url(${profilePhotoLarge});
   background-size: cover;
   background-position: center;
 
@@ -491,6 +493,23 @@ const PhotoContainer = styled.div`
     transition: all 1.3s ease;
     animation: ${profileAnimationReveal} 2s ease-in;
     animation-fill-mode: forwards;
+  }
+
+  // ? RESPONSIVE IMAGES
+  @media (max-width: 1300px) {
+    background-image: url(${profilePhotoMedium});
+  }
+
+  @media (max-width: 990px) {
+    background-image: url(${profilePhotoSmall});
+  }
+
+  @media (max-width: 768px) {
+    background-image: url(${profilePhotoLarge});
+  }
+
+  @media (max-width: 400px) {
+    background-image: url(${profilePhotoSmall});
   }
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import video from '../assets/emojifooter3.mp4';
+import video from '../assets/emojifooter.mp4';
 
 export const Footer = () => {
   const handleSendMail = () => {
