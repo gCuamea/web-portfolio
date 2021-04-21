@@ -102,14 +102,16 @@ export const Main = () => {
             <AvailabilityCircle className="animate__animated animate__fadeIn animate__delay-1s"></AvailabilityCircle>
           </div>
         </Availability>
-        <PhotoContainer /* className="animate__animated animate__fadeInRight animate__delay-1s" */
-        >
-          <FrameworksContainer>
-            <FrameworkIcon src={jsSVG}></FrameworkIcon>
-            <FrameworkIcon src={reactSVG}></FrameworkIcon>
-            <FrameworkIcon src={sassSVG}></FrameworkIcon>
-          </FrameworksContainer>
-        </PhotoContainer>
+        <PhotoDiv>
+          <PhotoContainer /* className="animate__animated animate__fadeInRight animate__delay-1s" */
+          >
+            <FrameworksContainer>
+              <FrameworkIcon src={jsSVG}></FrameworkIcon>
+              <FrameworkIcon src={reactSVG}></FrameworkIcon>
+              <FrameworkIcon src={sassSVG}></FrameworkIcon>
+            </FrameworksContainer>
+          </PhotoContainer>
+        </PhotoDiv>
         <AboutMe>
           <div className="text-animate">
             <h4 className="uppercase" ref={TextAnimate9}>
@@ -407,7 +409,7 @@ const SocialButtons = styled.div`
   }
 `;
 
-const profileAnimation = keyframes`
+const profileAnimationReveal = keyframes`
   0% {
     transform: translate(0vw, 0vw);
   }
@@ -416,14 +418,35 @@ const profileAnimation = keyframes`
   }
 `;
 
-const PhotoContainer = styled.div`
+const profileAnimationZoom = keyframes`
+  0% {
+    /* tra: 2000% */
+    transform: scale(1.3);
+  }
+  
+  100% {
+    /* background-size: cover; */
+    transform: scale(1);
+  }
+`;
+
+const PhotoDiv = styled.div`
+  overflow: hidden;
   height: 53vw;
   width: 26vw;
+`;
+
+const PhotoContainer = styled.div`
+  height: 100%;
+  width: 100%;
   padding: 0rem 3rem;
   background-image: url(${profilePhoto});
   background-size: cover;
   background-position: center;
-  border-radius: 4px;
+  background-repeat: no-repeat;
+  /* border-radius: 4px; */
+
+  animation: ${profileAnimationZoom} 3s ease;
 
   position: absolute;
   right: 0;
@@ -463,7 +486,7 @@ const PhotoContainer = styled.div`
     z-index: 5;
 
     transition: all 1.3s ease;
-    animation: ${profileAnimation} 2s ease-in;
+    animation: ${profileAnimationReveal} 2s ease-in;
     animation-fill-mode: forwards;
   }
 `;
