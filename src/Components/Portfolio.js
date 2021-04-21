@@ -23,6 +23,7 @@ export const Portfolio = () => {
                 ReactJS - NodeJS / Express - MongoDB - JWT
               </ProjectFrameworks>
             </ProjectInfo>
+            <ProjectVideo></ProjectVideo>
           </a>
         </Project>
         {/* </div> */}
@@ -142,6 +143,7 @@ const PortfolioProjects = styled.div`
 const Project = styled.div`
   display: flex;
   flex-flow: column;
+  position: relative;
   /* height: 20vw; */
 
   justify-content: center;
@@ -199,4 +201,43 @@ const ProjectFrameworks = styled.p`
   color: var(--color-primary-dark);
   font-weight: bolder;
   padding-bottom: 3vw;
+`;
+
+const ProjectVideo = styled.div`
+  position: absolute;
+  right: 3%;
+  top: 50%;
+
+  height: 20rem;
+  width: 30rem;
+
+  transform: translateY(-50%);
+
+  background-color: orangered;
+  z-index: 4;
+  overflow: hidden;
+
+  &:hover {
+    &::after {
+      transform: translate(-40vw, 40vw);
+    }
+  }
+
+  &::after {
+    content: '';
+    height: 70vw;
+    width: 70vw;
+
+    background-color: var(--color-background);
+
+    position: absolute;
+    top: -30vw;
+    left: -2vw;
+
+    clip-path: polygon(9% 0, 100% 55%, 100% 100%, 0 100%, 0 0);
+
+    z-index: 5;
+
+    transition: all 1.5s ease;
+  }
 `;
