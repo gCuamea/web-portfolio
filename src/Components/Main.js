@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import profilePhoto from '../assets/profile-photo.png';
 
 import reactSVG from '../assets/react.svg';
@@ -102,7 +102,8 @@ export const Main = () => {
             <AvailabilityCircle className="animate__animated animate__fadeIn animate__delay-1s"></AvailabilityCircle>
           </div>
         </Availability>
-        <PhotoContainer className="animate__animated animate__fadeInRight animate__delay-1s">
+        <PhotoContainer /* className="animate__animated animate__fadeInRight animate__delay-1s" */
+        >
           <FrameworksContainer>
             <FrameworkIcon src={jsSVG}></FrameworkIcon>
             <FrameworkIcon src={reactSVG}></FrameworkIcon>
@@ -338,15 +339,6 @@ const AvailabilityText = styled.h3`
     font-size: 1.15vw;
   }
 
-  /*  @media (max-width: 920px) {
-    font-size: 3.3vw;
-    padding-right: 10vw;
-
-    span {
-      font-size: 1.7vw;
-    } */
-  /* } */
-
   @media (max-width: 768px) {
     font-size: 4.5vw;
 
@@ -415,6 +407,15 @@ const SocialButtons = styled.div`
   }
 `;
 
+const profileAnimation = keyframes`
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  100% {
+    transform: translate(-100vw, 100vw);
+  }
+`;
+
 const PhotoContainer = styled.div`
   height: 53vw;
   width: 26vw;
@@ -431,6 +432,8 @@ const PhotoContainer = styled.div`
   display: flex;
   align-items: flex-end;
 
+  overflow: hidden;
+
   @media (max-width: 990px) {
     height: 38vw;
     top: 50vw;
@@ -442,6 +445,26 @@ const PhotoContainer = styled.div`
     top: 46vw;
 
     padding: 0 6vw;
+  }
+
+  &::after {
+    content: '';
+    height: 250vw;
+    width: 250vw;
+
+    background-color: var(--color-background);
+
+    position: absolute;
+    top: -35vw;
+    left: 0;
+
+    clip-path: polygon(9% 0, 100% 55%, 100% 100%, 0 100%, 0 0);
+
+    z-index: 5;
+
+    transition: all 1.3s ease;
+    animation: ${profileAnimation} 2s ease-in;
+    animation-fill-mode: forwards;
   }
 `;
 
