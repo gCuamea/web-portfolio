@@ -167,7 +167,6 @@ const Project = styled.div`
   display: flex;
   flex-flow: column;
   position: relative;
-  /* height: 20vw; */
 
   justify-content: center;
   border-bottom: 1px solid var(--color-primary-dark);
@@ -193,11 +192,23 @@ const Project = styled.div`
   }
 
   @media (max-width: 920px) {
-    height: 30vw;
+    height: 50vw;
+    justify-content: start;
   }
 
   @media (max-width: 600px) {
-    height: 40vw;
+    height: 55vw;
+
+    /* &:hover {
+      .pvideo {
+        &::after {
+          display: none;
+        }
+        > video {
+          animation: ${videoZoom} 5s ease-out;
+        }
+      }
+    } */
   }
 `;
 
@@ -208,6 +219,7 @@ const ProjectTitle = styled.h2`
 
   @media (max-width: 920px) {
     font-size: 7vw;
+    padding-top: 2vw;
   }
 
   @media (max-width: 600px) {
@@ -252,7 +264,6 @@ const ProjectVideo = styled.div`
 
   overflow: hidden;
 
-  /* 1 */
   z-index: 4;
   overflow: hidden;
 
@@ -283,5 +294,31 @@ const ProjectVideo = styled.div`
     z-index: 5;
 
     transition: all 1.5s ease;
+  }
+
+  @media (max-width: 920px) {
+    top: initial;
+    right: initial;
+    transform: initial;
+
+    height: 22vw;
+    bottom: -1vw;
+    width: 70%;
+
+    position: relative;
+    margin: auto;
+
+    &::after {
+      left: -1vw;
+      width: 75vw;
+    }
+
+    /* transform: translateX(-50%); */
+  }
+
+  @media (max-width: 600px) {
+    &::after {
+      display: none;
+    }
   }
 `;
