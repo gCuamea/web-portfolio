@@ -37,13 +37,13 @@ export const Competencies = () => {
           Competencias
         </h2>
         <CompetenciesContentBox
-          title="Frameworks / librerías web"
-          text="ReactJS, NodeJS, Express, JSON Web Tokens."
-        />
-        <CompetenciesContentBox
           title="Tecnologías Web"
           text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
             Node."
+        />
+        <CompetenciesContentBox
+          title="Frameworks / librerías web"
+          text="ReactJS, Express, JSON Web Tokens."
         />
         <CompetenciesContentBox
           title="Frameworks de React"

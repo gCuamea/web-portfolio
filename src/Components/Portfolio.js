@@ -49,7 +49,7 @@ export const Portfolio = () => {
           <a cursor-class="arrow" href="/#">
             <ProjectTitle className="ptitle">Doggocare</ProjectTitle>
             <ProjectInfo>
-              <ProjectPlatform>Website</ProjectPlatform>
+              <ProjectPlatform>Landing Website</ProjectPlatform>
               <ProjectFrameworks>Bootstrap 5</ProjectFrameworks>
             </ProjectInfo>
             <ProjectVideo className="pvideo">
