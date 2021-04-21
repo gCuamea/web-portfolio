@@ -182,7 +182,7 @@ const MainContainer = styled.main`
     grid-template-areas:
       'greet greet greet greet greet .'
       'title title title title title title'
-      'locat locat . . . avail'
+      'locat locat locat . . avail'
       'about about about about about .';
 
     grid-template-rows: min-content min-content min-content 50vw;
