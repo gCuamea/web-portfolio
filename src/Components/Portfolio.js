@@ -19,7 +19,10 @@ export const Portfolio = () => {
       </PortfolioIntro>
       <PortfolioProjects>
         <Project>
-          <a cursor-class="arrow" href="/#">
+          <a
+            cursor-class="arrow"
+            href="https://gcuamea.github.io/twotter-app-front/login"
+          >
             <ProjectTitle>Twotter</ProjectTitle>
             <ProjectInfo>
               <ProjectPlatform>Website - App</ProjectPlatform>
@@ -34,7 +37,7 @@ export const Portfolio = () => {
         </Project>
 
         <Project cursor-class="arrow">
-          <a cursor-class="arrow" href="/#">
+          <a cursor-class="arrow" href="https://gcuamea.github.io/noto-app/">
             <ProjectTitle>Noto</ProjectTitle>
             <ProjectInfo>
               <ProjectPlatform>Website - App</ProjectPlatform>
@@ -46,7 +49,10 @@ export const Portfolio = () => {
           </a>
         </Project>
         <Project cursor-class="arrow">
-          <a cursor-class="arrow" href="/#">
+          <a
+            cursor-class="arrow"
+            href="https://gcuamea.github.io/doggocare-landing/"
+          >
             <ProjectTitle className="ptitle">Doggocare</ProjectTitle>
             <ProjectInfo>
               <ProjectPlatform>Landing Website</ProjectPlatform>
@@ -58,7 +64,7 @@ export const Portfolio = () => {
           </a>
         </Project>
         <Project>
-          <a cursor-class="arrow" href="/#">
+          <a cursor-class="arrow" href="https://porco.tech">
             <ProjectTitle>Portfolio</ProjectTitle>
             <ProjectInfo>
               <ProjectPlatform>Website</ProjectPlatform>
