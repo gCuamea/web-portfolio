@@ -21,7 +21,7 @@ export const Portfolio = () => {
         <Project>
           <a
             cursor-class="arrow"
-            href="https://gcuamea.github.io/twotter-app-front/login"
+            href="https://gcuamea.github.io/twotter-app-front/"
           >
             <ProjectTitle>Twotter</ProjectTitle>
             <ProjectInfo>
