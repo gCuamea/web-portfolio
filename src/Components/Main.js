@@ -9,7 +9,8 @@ import reactSVG from '../assets/react.svg';
 import jsSVG from '../assets/js.svg';
 import sassSVG from '../assets/sass.svg';
 
-import curriculumPDF from '../assets/curriculum.pdf';
+import currESP from '../assets/cvesp.pdf';
+import currENG from '../assets/cveng.pdf';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -146,14 +147,24 @@ export const Main = () => {
         >
           LinkedIn
         </a>
-        <a
-          href={curriculumPDF}
-          cursor-class="arrow"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Curriculum
-        </a>
+        <SocialSplitButton>
+          <a
+            href={currENG}
+            cursor-class="arrow"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Curriculum (English)
+          </a>
+          <a
+            href={currESP}
+            cursor-class="arrow"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Curriculum (Español)
+          </a>
+        </SocialSplitButton>
         <a
           href="https://github.com/gCuamea"
           cursor-class="arrow"
@@ -389,7 +400,7 @@ const SocialButtons = styled.div`
   text-align: center;
 
   > a {
-    width: 33.333%;
+    width: 100%;
     height: 9rem;
     cursor: pointer;
 
@@ -413,6 +424,65 @@ const SocialButtons = styled.div`
       border-left: 0;
       border-right: 0;
       color: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-flow: column;
+
+    > a {
+      &:first-child {
+        border-bottom: 0;
+      }
+    }
+  }
+`;
+
+const SocialSplitButton = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > a {
+    width: 50%;
+    height: 9rem;
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-orange-primary);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: bolder;
+    background-color: transparent;
+    font-family: 'Inter';
+
+    border: var(--color-primary-dark) 1px solid;
+
+    &:first-child {
+      border-right: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    order: -1;
+
+    > a {
+      font-size: 1.7rem;
+      border-bottom: 0;
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:nth-child(2) {
+        border-right: 0;
+      }
     }
   }
 `;
