@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.d69e0f00.chunk.css",
-    "main.js": "./static/js/main.169228d0.chunk.js",
-    "main.js.map": "./static/js/main.169228d0.chunk.js.map",
+    "main.js": "./static/js/main.18952a66.chunk.js",
+    "main.js.map": "./static/js/main.18952a66.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.4d29f787.js",
     "runtime-main.js.map": "./static/js/runtime-main.4d29f787.js.map",
     "static/css/2.a1596f27.chunk.css": "./static/css/2.a1596f27.chunk.css",
@@ -12,7 +12,8 @@
     "static/css/2.a1596f27.chunk.css.map": "./static/css/2.a1596f27.chunk.css.map",
     "static/css/main.d69e0f00.chunk.css.map": "./static/css/main.d69e0f00.chunk.css.map",
     "static/js/2.61175668.chunk.js.LICENSE.txt": "./static/js/2.61175668.chunk.js.LICENSE.txt",
-    "static/media/curriculum.7abb4d8d.pdf": "./static/media/curriculum.7abb4d8d.pdf",
+    "static/media/cveng.83f9907e.pdf": "./static/media/cveng.83f9907e.pdf",
+    "static/media/cvesp.effcd884.pdf": "./static/media/cvesp.effcd884.pdf",
     "static/media/doggovid.03c1a098.mp4": "./static/media/doggovid.03c1a098.mp4",
     "static/media/emojifooter.3448eed3.mp4": "./static/media/emojifooter.3448eed3.mp4",
     "static/media/js.fd46ca41.svg": "./static/media/js.fd46ca41.svg",
@@ -31,6 +32,6 @@
     "static/css/2.a1596f27.chunk.css",
     "static/js/2.61175668.chunk.js",
     "static/css/main.d69e0f00.chunk.css",
-    "static/js/main.169228d0.chunk.js"
+    "static/js/main.18952a66.chunk.js"
   ]
 }
