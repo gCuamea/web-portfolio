@@ -38,7 +38,7 @@ export const Competencies = () => {
         </h2>
         <CompetenciesContentBox
           title="Tecnologías Web"
-          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES6),
+          text="HTML5, CSS3/SASS/Bootstrap 5/Styled components, JavaScript (ES7), JQuery,
             Node."
         />
         <CompetenciesContentBox
