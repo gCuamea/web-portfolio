@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import twotterVid from '../assets/twottervid.mkv';
-import notoVid from '../assets/notovid.mkv';
-import doggoVid from '../assets/doggovid.mkv';
-import portfolioVid from '../assets/portfoliovid.mkv';
+import twotterVid from '../assets/twottervid.mp4';
+import notoVid from '../assets/notovid.mp4';
+import doggoVid from '../assets/doggovid.mp4';
+import portfolioVid from '../assets/portfoliovid.mp4';
 
 export const Portfolio = () => {
   return (
@@ -31,7 +31,13 @@ export const Portfolio = () => {
               </ProjectFrameworks>
             </ProjectInfo>
             <ProjectVideo className="pvideo">
-              <video src={twotterVid} muted autoPlay={true} loop></video>
+              <video
+                src={twotterVid}
+                muted
+                autoPlay={true}
+                loop
+                playsInline
+              ></video>
             </ProjectVideo>
           </a>
         </Project>
@@ -44,7 +50,13 @@ export const Portfolio = () => {
               <ProjectFrameworks>ReactJS - Firebase - JWT</ProjectFrameworks>
             </ProjectInfo>
             <ProjectVideo className="pvideo">
-              <video src={notoVid} muted autoPlay={true} loop></video>
+              <video
+                src={notoVid}
+                muted
+                autoPlay={true}
+                loop
+                playsInline
+              ></video>
             </ProjectVideo>
           </a>
         </Project>
@@ -59,7 +71,13 @@ export const Portfolio = () => {
               <ProjectFrameworks>Bootstrap 5</ProjectFrameworks>
             </ProjectInfo>
             <ProjectVideo className="pvideo">
-              <video src={doggoVid} muted autoPlay={true} loop></video>
+              <video
+                src={doggoVid}
+                muted
+                autoPlay={true}
+                loop
+                playsInline
+              ></video>
             </ProjectVideo>
           </a>
         </Project>
@@ -71,7 +89,13 @@ export const Portfolio = () => {
               <ProjectFrameworks>ReactJS - GSAP</ProjectFrameworks>
             </ProjectInfo>
             <ProjectVideo className="pvideo">
-              <video src={portfolioVid} muted autoPlay={true} loop></video>
+              <video
+                src={portfolioVid}
+                muted
+                autoPlay={true}
+                loop
+                playsInline
+              ></video>
             </ProjectVideo>
           </a>
         </Project>
@@ -315,16 +339,9 @@ const ProjectVideo = styled.div`
     margin: auto;
 
     &::after {
-      left: -1vw;
-      width: 75vw;
       display: none;
     }
 
     /* transform: translateX(-50%); */
-  }
-
-  @media (max-width: 600px) {
-    &::after {
-    }
   }
 `;

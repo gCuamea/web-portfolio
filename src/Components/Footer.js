@@ -13,7 +13,7 @@ export const Footer = () => {
       <h2 onClick={handleSendMail} cursor-class="arrow">
         gcuamea09@gmail.com
       </h2>
-      <video src={video} muted autoPlay={true} loop></video>
+      <video src={video} muted autoPlay={true} loop playsInline></video>
     </FooterContainer>
   );
 };
